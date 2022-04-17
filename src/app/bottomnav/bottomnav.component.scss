@@ -1,0 +1,90 @@
+nav, .nav {
+  display: none;  
+}
+
+$breakpoints: (
+  phone: 640px,
+  tablet: 768px,
+  desktop: 1024px,
+);
+
+@mixin media-up($breakpoints) {
+  @media only screen and (min-width: $breakpoints) {
+    @content;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  nav {
+    display: flex;
+  }
+  .nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 55px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    display: flex;
+    overflow-x: auto;
+  }
+  
+  .nav__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    min-width: 50px;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: sans-serif;
+    font-size: 13px;
+    color: #444444;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color 0.1s ease-in-out;
+  }
+  
+  .nav__link:hover {
+    background-color: #eeeeee;
+  }
+  
+  .nav__link--active {
+    color: #009578;
+  }
+  
+  .nav__icon {
+    font-size: 18px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  nav, .nav {
+    display: none;
+  }
+}
+
+
+$light-background: #f2ece4;
+$light-text: #036;
+$dark-background: #6b717f;
+$dark-text: #d2e1dd;
+
+@mixin theme-colors($light-theme: true) {
+  @if $light-theme {
+    background-color: $light-background;
+    color: $light-text;
+  } @else {
+    background-color: $dark-background;
+    color: $dark-text;
+  }
+}
+
+.banner {
+  width: 235px;
+  height: 25px;
+  @include theme-colors($light-theme: true);
+  body.dark & {
+    @include theme-colors($light-theme: false);
+  }
+}
