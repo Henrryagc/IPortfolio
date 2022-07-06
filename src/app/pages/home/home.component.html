@@ -40,3 +40,29 @@
 
 </section>
 
+<section>
+    <ng-lottie
+  width="600px"
+  height="500px"
+  containerClass="moving-box another-class"
+
+  [options]="options"
+ 
+></ng-lottie>
+
+<main lottie [options]="options2" (animationCreated)="animationCreated($event)"></main>
+</section>
+
+<!-- 
+    [styles]="styles"
+    (animationCreated)="animationCreated($event)"
+    (configReady)="configReady()"
+    (dataReady)="dataReady()"
+    (domLoaded)="domLoaded()"
+    (enterFrame)="enterFrame($event)"
+    (segmentStart)="segmentStart($event)"
+    (complete)="complete($event)"
+    (loopComplete)="loopComplete($event)"
+    (destroy)="destroy($event)"
+    (error)="error($event)"
+-->

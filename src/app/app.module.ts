@@ -12,6 +12,11 @@ import { HomeComponent } from './pages/home/home.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { BottomnavComponent } from './bottomnav/bottomnav.component';
+import { LottieModule } from 'ngx-lottie';
+import player from 'lottie-web';
+export function playerFactory() {
+  return player;
+}
 
 @NgModule({
   declarations: [
@@ -32,6 +37,9 @@ import { BottomnavComponent } from './bottomnav/bottomnav.component';
       // Register the ServiceWorker as soon as the application is stable
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
+    }),
+    LottieModule.forRoot({
+      player: playerFactory      
     }),
   ],
   providers: [],

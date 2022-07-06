@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AnimationItem } from 'lottie-web';
+import { AnimationOptions } from 'ngx-lottie';
 
 @Component({
   selector: 'app-home',
@@ -15,6 +17,18 @@ export class HomeComponent implements OnInit {
     // this.underscore()
   }
 
+  options: AnimationOptions = {
+    path: '/assets/lottie/programming-computer.json',
+    autoplay: true,
+    loop: true
+  }
+  options2: AnimationOptions = {
+    path: 'https://assets5.lottiefiles.com/packages/lf20_rnfwc4vj.json'
+  }
+
+  animationCreated(animationItem: AnimationItem): void {
+    console.log(animationItem);
+  }
   /*underscore() {
     
     let isVisibleUnderScore = true;
