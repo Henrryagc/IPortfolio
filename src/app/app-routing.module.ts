@@ -7,21 +7,30 @@ import { ProjectsComponent } from './pages/projects/projects.component';
 
 const routes: Routes = [
   {
-    path: 'home',
-    component: HomeComponent
-  },  
-  {    
-    path: 'projects',
-    component: ProjectsComponent
-  },
-  {
-    path: 'about-me',
-    component: AboutMeComponent
-  },
-  {
-    path: 'contact',
-    component: ContactComponent
-  }
+    path: '', // iportfolio
+    children: [
+      {
+        path: 'home',
+        component: HomeComponent
+      },
+      {    
+        path: 'projects',
+        component: ProjectsComponent
+      },
+      {
+        path: 'about-me',
+        component: AboutMeComponent
+      },
+      {
+        path: 'contact',
+        component: ContactComponent
+      },
+      {
+        path: '**',
+        redirectTo: 'home'
+      }
+    ]
+  },    
 ];
 
 @NgModule({

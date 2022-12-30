@@ -30,7 +30,7 @@ export function playerFactory() {
     BottomnavComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule,        
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,

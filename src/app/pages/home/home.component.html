@@ -13,10 +13,11 @@
                         Make
                             <div id=flip>
                               <div><div>FullStack Developer</div></div>
+                              <div><div>Java Developer</div></div>
                               <div><div>Mobile Developer</div></div>
                               <div><div>Software Ingenier</div></div>
                             </div>
-                            AweSoMe!
+                        AweSoMe!
                     </div>   
                 </div>        
             </div>
@@ -40,19 +41,18 @@
 
 </section>
 
-<section>
-    <ng-lottie
-  width="600px"
-  height="500px"
-  containerClass="moving-box another-class"
-
-  [options]="options"
- 
-></ng-lottie>
-
-<main lottie [options]="options2" (animationCreated)="animationCreated($event)"></main>
+<section class="lotie">
+    
+    <main lottie [options]="options2" (animationCreated)="animationCreated($event)"></main>
 </section>
 
+<ng-lottie
+        width="600px"
+        height="500px"
+        containerClass="moving-box another-class"
+        [options]="options"
+    ></ng-lottie>
+  
 <!-- 
     [styles]="styles"
     (animationCreated)="animationCreated($event)"
