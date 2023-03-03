@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,7 +14,10 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { BottomnavComponent } from './bottomnav/bottomnav.component';
 import { LottieModule } from 'ngx-lottie';
+import { SwiperModule } from 'swiper/angular';
+
 import player from 'lottie-web';
+import { PersonalModule } from './pages/projects/modules/personal/personal.module';
 export function playerFactory() {
   return player;
 }
@@ -30,7 +34,8 @@ export function playerFactory() {
     BottomnavComponent
   ],
   imports: [
-    BrowserModule,        
+    BrowserModule,   
+    BrowserAnimationsModule,     
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
@@ -41,6 +46,8 @@ export function playerFactory() {
     LottieModule.forRoot({
       player: playerFactory      
     }),
+    SwiperModule,
+    PersonalModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

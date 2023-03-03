@@ -13,8 +13,9 @@ body {
 }*/
 
 .logo {
-  max-width: 200px;  
+  max-width: 200px;
 }
+
 .navbar {
   align-items: center;
   background: transparent;
@@ -28,6 +29,32 @@ body {
 .push-left {
   margin-left: auto;
 }
+
+ul {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 8px;
+    color: #ccc;    
+    font-family: Lobster;
+    font-size: 1.8em;
+  }
+
+  .active-link {
+    background-color: yellow;
+    color: black;
+    transition: 0.8s;
+    font-weight: 700;
+    transition: .8s;
+  }
+}
+
 /*
 /* Menu * /
 .hamburger {
