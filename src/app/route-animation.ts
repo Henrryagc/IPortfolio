@@ -3,7 +3,7 @@ import {
     query,
     animate,
     transition,
-    style    
+    style
 } from '@angular/animations'
 
 
@@ -13,18 +13,18 @@ export const fader = trigger('routeAnimations', [
             style({
                 position: 'absolute',
                 left: 0,
-                with: '100%',
+                width: '100%',
                 opacity: 0,
                 transform: 'scale(0) translateY(100%)'
             })
-        ]),
-        query(':enter, :leave', /*{ optional: true },*/ [
+        ], {optional: true}),
+        query(':enter, :leave', [
             animate('600ms ease',
                 style({
                     opacity:1,
                     transform: 'scale(1) translateY(0)'
                 })
             )
-        ])
+        ], { optional: true })
     ])
-]) 
+])

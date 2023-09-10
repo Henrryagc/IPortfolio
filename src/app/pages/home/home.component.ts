@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AnimationItem } from 'lottie-web';
 import { AnimationOptions } from 'ngx-lottie';
 
@@ -11,7 +12,7 @@ export class HomeComponent implements OnInit {
 
   isTrue = true;
 
-  constructor() { }
+  constructor(private route: Router) { }
 
   ngOnInit(): void {
     // this.underscore()
@@ -28,6 +29,15 @@ export class HomeComponent implements OnInit {
 
   animationCreated(animationItem: AnimationItem): void {
     console.log(animationItem);
+  }
+
+  @HostListener('document:keypress', ['$event'])
+  handleKeyboardEvent(event: KeyboardEvent) {  
+    if('n' == event.key || 'N' == event.key) {
+      this.route.navigateByUrl("projects");
+      console.log(event.key);
+    }   
+    console.log(event);
   }
   /*underscore() {
     

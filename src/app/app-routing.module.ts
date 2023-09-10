@@ -13,18 +13,18 @@ const routes: Routes = [
         path: 'home',
         component: HomeComponent,
         data: {
-          animation: 'isRight'
+          // animation: 'isRight'
         }
       },
-      {    
+      {
         path: 'projects',
         component: ProjectsComponent,
         data: {
-          animation: 'isRight'
+          // animation: 'isRight'
         },
         children: [
-          { path: 'university', loadChildren: () => import('./pages/projects/modules/university/university.module').then(m => m.UniversityModule) },    
-          { path: 'personal', loadChildren: () => import('./pages/projects/modules/personal/personal.module').then(m => m.PersonalModule) },    
+          { path: 'university', loadChildren: () => import('./pages/projects/modules/university/university.module').then(m => m.UniversityModule) },
+          { path: 'personal', loadChildren: () => import('./pages/projects/modules/personal/personal.module').then(m => m.PersonalModule) },
         ]
       },
       {
@@ -40,7 +40,7 @@ const routes: Routes = [
         redirectTo: 'home'
       }
     ]
-  },  
+  },
 ];
 
 @NgModule({
