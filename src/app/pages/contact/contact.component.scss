@@ -1,0 +1,84 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Encabezado y Barra de Navegación */
+.header {
+    background-color: #007acc;
+    color: white;
+}
+
+.navbar {
+    background-color: transparent;
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-list li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-list a:hover {
+    color: #005a9e;
+}
+
+/* Hero Section */
+.hero {
+    //background-image: url('background.jpg');
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero-title {
+    font-size: 48px;
+    margin: 0;
+}
+
+.hero-subtitle {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+/* Secciones */
+.about-section,
+.projects-section,
+.contact-section {
+    padding: 40px 0;
+}
+
+.about-section h2,
+.projects-section h2,
+.contact-section h2 {
+    font-size: 36px;
+    margin: 0;
+}
+
+/* Pie de Página */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}

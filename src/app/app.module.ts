@@ -1,4 +1,6 @@
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,8 +12,14 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { HomeComponent } from './pages/home/home.component';
 import { environment } from '../environments/environment';
 import { BottomnavComponent } from './bottomnav/bottomnav.component';
-import { ServiceWorkerModule } from '@angular/service-worker';
-import { BrowserModule } from '@angular/platform-browser';
+import { LottieModule } from 'ngx-lottie';
+import { SwiperModule } from 'swiper/angular';
+
+import player from 'lottie-web';
+import { PersonalModule } from './pages/projects/modules/personal/personal.module';
+export function playerFactory() {
+  return player;
+}
 
 @NgModule({
   declarations: [
@@ -24,7 +32,9 @@ import { BrowserModule } from '@angular/platform-browser';
     HomeComponent,
     BottomnavComponent
   ],
-  imports: [    
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     BrowserModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
@@ -33,6 +43,11 @@ import { BrowserModule } from '@angular/platform-browser';
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
     }),
+    LottieModule.forRoot({
+      player: playerFactory
+    }),
+    SwiperModule,
+    PersonalModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

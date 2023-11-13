@@ -1,2 +1,12 @@
-
-$primary: #fcdab7;
+@use 'src/assets/scss/colors';
+main {
+    height: 100vh;
+    display: flex;
+}
+.container {
+    margin: auto;
+    background-color: colors.$dark;
+    border-radius: 26px;
+    max-width: 1200px;
+    min-width: 900px;
+}

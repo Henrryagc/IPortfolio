@@ -7,25 +7,47 @@ import { ProjectsComponent } from './pages/projects/projects.component';
 
 const routes: Routes = [
   {
-    path: 'home',
-    component: HomeComponent
-  },  
-  {    
-    path: 'projects',
-    component: ProjectsComponent
+    path: '', // iportfolio
+    children: [
+      {
+        path: 'home',
+        component: HomeComponent,
+        data: {
+          // animation: 'isRight'
+        }
+      },
+      {
+        path: 'projects',
+        component: ProjectsComponent,
+        data: {
+          // animation: 'isRight'
+        },
+        children: [
+          { path: 'university', loadChildren: () => import('./pages/projects/modules/university/university.module').then(m => m.UniversityModule) },
+          { path: 'personal', loadChildren: () => import('./pages/projects/modules/personal/personal.module').then(m => m.PersonalModule) },
+        ]
+      },
+      {
+        path: 'about-me',
+        component: AboutMeComponent
+      },
+      {
+        path: 'contact',
+        component: ContactComponent
+      },
+      {
+        path: '**',
+        redirectTo: 'home'
+      }
+    ]
   },
-  {
-    path: 'about-me',
-    component: AboutMeComponent
-  },
-  {
-    path: 'contact',
-    component: ContactComponent
-  }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    scrollPositionRestoration: 'enabled',
+    anchorScrolling: 'enabled'
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
