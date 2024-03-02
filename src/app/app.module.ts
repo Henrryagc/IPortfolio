@@ -34,8 +34,8 @@ export function playerFactory() {
     BottomnavComponent
   ],
   imports: [
-    BrowserModule,   
-    BrowserAnimationsModule,     
+    BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
@@ -44,7 +44,7 @@ export function playerFactory() {
       registrationStrategy: 'registerWhenStable:30000'
     }),
     LottieModule.forRoot({
-      player: playerFactory      
+      player: playerFactory
     }),
     SwiperModule,
     PersonalModule,
