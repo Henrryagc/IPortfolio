@@ -1,8 +1,16 @@
-.container {
+.projects {
   display: flex;
+  justify-content: center;
+}
+
+.projects-container {
+  display: inline-grid;
+  grid-gap: 16px;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .card {
+  width: 250px;
   background-color: #222222;
   border-radius: 10px;
   padding: 20px;
