@@ -4,20 +4,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AboutMeComponent } from './pages/about-me/about-me.component';
-import { ProjectsComponent } from './pages/projects/projects.component';
-import { HeaderComponent } from './header/header.component';
-import { SidenavComponent } from './sidenav/sidenav.component';
-import { ContactComponent } from './pages/contact/contact.component';
-import { HomeComponent } from './pages/home/home.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { BottomnavComponent } from './bottomnav/bottomnav.component';
 import { LottieModule } from 'ngx-lottie';
 import { SwiperModule } from 'swiper/angular';
 
 import player from 'lottie-web';
-import { PersonalModule } from './pages/projects/modules/personal/personal.module';
+import { AboutMeComponent } from './main-content/pages/about-me/about-me.component';
+import { ProjectsComponent } from './main-content/pages/projects/projects.component';
+import { ContactComponent } from './main-content/pages/contact/contact.component';
+import { HomeComponent } from './main-content/pages/home/home.component';
+import { PersonalModule } from './main-content/pages/projects/modules/personal/personal.module';
+import { MainContentComponent } from './main-content/main-content.component';
+import { ProfileComponent } from './profile/profile.component';
+import { NavComponent } from './nav/nav.component';
+
 export function playerFactory() {
   return player;
 }
@@ -27,11 +28,8 @@ export function playerFactory() {
     AppComponent,
     AboutMeComponent,
     ProjectsComponent,
-    HeaderComponent,
-    SidenavComponent,
     ContactComponent,
-    HomeComponent,
-    BottomnavComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -48,6 +46,9 @@ export function playerFactory() {
     }),
     SwiperModule,
     PersonalModule,
+    ProfileComponent,
+    MainContentComponent,
+    NavComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

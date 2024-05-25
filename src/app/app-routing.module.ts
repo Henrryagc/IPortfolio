@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AboutMeComponent } from './pages/about-me/about-me.component';
-import { ContactComponent } from './pages/contact/contact.component';
-import { HomeComponent } from './pages/home/home.component';
-import { ProjectsComponent } from './pages/projects/projects.component';
+import { AboutMeComponent } from './main-content/pages/about-me/about-me.component';
+import { ContactComponent } from './main-content/pages/contact/contact.component';
+import { HomeComponent } from './main-content/pages/home/home.component';
+import { ProjectsComponent } from './main-content/pages/projects/projects.component';
 
 const routes: Routes = [
   {
@@ -23,8 +23,8 @@ const routes: Routes = [
           // animation: 'isRight'
         },
         children: [
-          { path: 'university', loadChildren: () => import('./pages/projects/modules/university/university.module').then(m => m.UniversityModule) },
-          { path: 'personal', loadChildren: () => import('./pages/projects/modules/personal/personal.module').then(m => m.PersonalModule) },
+          { path: 'university', loadChildren: () => import('./main-content/pages/projects/modules/university/university.module').then(m => m.UniversityModule) },
+          { path: 'personal', loadChildren: () => import('./main-content/pages/projects/modules/personal/personal.module').then(m => m.PersonalModule) },
         ]
       },
       {

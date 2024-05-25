@@ -11,6 +11,9 @@ import { RouterOutlet } from '@angular/router';
   ]
 })
 export class AppComponent {
+
+  // * TODO : https://angular.io/guide/standalone-components#lazy-loading-a-standalone-component
+
   title = 'iportfolio';
 
 
