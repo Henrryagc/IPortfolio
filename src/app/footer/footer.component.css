@@ -1,0 +1,9 @@
+:host {
+  display: block;
+}
+
+footer {
+  height: 90px;
+  margin-top: 16px;
+  background-color: salmon;
+}
