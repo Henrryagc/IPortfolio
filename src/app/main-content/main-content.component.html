@@ -1,1 +1,9 @@
-<p>main-content works!</p>,
+
+<section>
+    @for (item of items; track $index) {
+        <div class="card">
+            {{ item }} - {{ $index }}
+        </div>
+    }
+</section>
+

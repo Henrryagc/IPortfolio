@@ -13,7 +13,10 @@ import { ChangeDetectionStrategy, Component, type OnInit } from '@angular/core';
 })
 export class MainContentComponent implements OnInit {
 
+  items = [1,2,3,4,5,6,4,8,5,4,1,2,4,5]
+
   ngOnInit(): void { }
+  
   def() {
     console.log("")
   }
