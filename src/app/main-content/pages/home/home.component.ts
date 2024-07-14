@@ -1,7 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AnimationItem } from 'lottie-web';
-import { AnimationOptions } from 'ngx-lottie';
 
 @Component({
   selector: 'app-home',
@@ -18,19 +16,6 @@ export class HomeComponent implements OnInit {
     // this.underscore()
   }
 
-  options: AnimationOptions = {
-    path: '/assets/lottie/programming-computer.json',
-    autoplay: true,
-    loop: true
-  }
-  options2: AnimationOptions = {
-    path: 'https://assets5.lottiefiles.com/packages/lf20_rnfwc4vj.json'
-  }
-
-  animationCreated(animationItem: AnimationItem): void {
-    console.log(animationItem);
-  }
-
   @HostListener('document:keypress', ['$event'])
   handleKeyboardEvent(event: KeyboardEvent) {  
     if('n' == event.key || 'N' == event.key) {
@@ -39,6 +24,7 @@ export class HomeComponent implements OnInit {
     }   
     console.log(event);
   }
+  
   /*underscore() {
     
     let isVisibleUnderScore = true;
