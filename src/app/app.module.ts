@@ -16,6 +16,8 @@ import { PersonalModule } from './main-content/pages/projects/modules/personal/p
 import { MainContentComponent } from './main-content/main-content.component';
 import { ProfileComponent } from './profile/profile.component';
 import { NavComponent } from './nav/nav.component';
+import { HeaderComponent } from "./header/header.component";
+import { FooterComponent } from "./footer/footer.component";
 
 
 @NgModule({
@@ -31,17 +33,19 @@ import { NavComponent } from './nav/nav.component';
     BrowserAnimationsModule,
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
-      enabled: environment.production,
-      // Register the ServiceWorker as soon as the application is stable
-      // or after 30 seconds (whichever comes first).
-      registrationStrategy: 'registerWhenStable:30000'
-    }),    
+        enabled: environment.production,
+        // Register the ServiceWorker as soon as the application is stable
+        // or after 30 seconds (whichever comes first).
+        registrationStrategy: 'registerWhenStable:30000'
+    }),
     SwiperModule,
     PersonalModule,
     ProfileComponent,
     MainContentComponent,
-    NavComponent
-  ],
+    NavComponent,
+    HeaderComponent,
+    FooterComponent
+],
   providers: [],
   bootstrap: [AppComponent]
 })
