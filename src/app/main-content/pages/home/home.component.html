@@ -40,3 +40,12 @@
   containerClass="moving-box another-class"
   [options]="options"
   class="computer"></ng-lottie>-->
+
+      <header>
+        <h2>Title</h2>
+    </header>
+        @for (item of items; track $index) {
+        <div class="card">
+            {{ item }} - {{ $index }}
+        </div>
+    }

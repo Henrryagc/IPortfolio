@@ -5,6 +5,19 @@
 <!-- <a [routerLink]="['/projects/university']" routerLinkActive="router-link-active"> {{ "go to university" | uppercase }}</a>
  -->
 
+ <header>
+    <div class="title">
+      Portfolio - projects
+    </div>
+    <nav>
+      <a href="">All</a>
+      <a href="">Full Stack</a>
+      <a href="">Frontend</a>
+      <a href="">Backend</a>
+      <a href="">Mobile</a>
+    </nav>
+ </header>
+
 <main class="projects">
   <section class="projects-container">
     <div class="card" *ngFor="let item of [1,2,3,4,5,6,4,7,9,8]">

@@ -1,3 +1,24 @@
+.title {
+  font-size: xx-large;
+  margin: .5rem;
+  padding: .5rem;
+}
+
+header {
+  height: 6rem;
+}
+
+header a {
+  text-decoration: none;
+  color: wheat;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  padding-right: 2rem;
+}
 .projects {
   display: flex;
   justify-content: center;
@@ -6,7 +27,7 @@
 .projects-container {
   display: inline-grid;
   grid-gap: 16px;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 
 .card {

@@ -1,5 +1,5 @@
 export interface NavCardDto {
     iconName: string
     iconSize: string
-    label: string    
+    label: string
 }
