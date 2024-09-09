@@ -6,33 +6,27 @@ export class  NavCardModel {
         <NavCardDto>{
             iconName: "bx bx-user",
             iconSize: this.iconSize,
-            label: "WHOAMI"
+            label: "WHOAMI",
+            route: "home"
         },
         <NavCardDto>{
             iconName: "bx bxs-server",
             iconSize: this.iconSize,
-            label: "PROJECTS"
+            label: "PROJECTS",
+            route: "projects"
         },
         <NavCardDto>{
             iconName: "bx bx-user",
             iconSize: this.iconSize,
-            label: ""
+            label: "",
+            route: "about-me"
         },
         <NavCardDto>{
             iconName: "bx bx-user",
             iconSize: this.iconSize,
-            label: "WHOAMI"
-        },
-        <NavCardDto>{
-            iconName: "bx bx-user",
-            iconSize: this.iconSize,
-            label: "WHOAMI"
-        },
-        <NavCardDto>{
-            iconName: "bx bx-user",
-            iconSize: this.iconSize,
-            label: "WHOAMI"
-        },
+            label: "WHOAMI",
+            route: "contact"
+        }
     ]
 
     public getNavCardItems(): NavCardDto[] {

@@ -16,10 +16,7 @@ const routes: Routes = [
         component: HomeComponent,
         data: {
           // animation: 'isRight'
-        },
-        children: [
-          { path: 'projects', component: ProjectsComponent}
-        ]
+        }
       },
       {
         path: 'projects',

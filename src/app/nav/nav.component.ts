@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, type OnInit } from '@angular/core';
+import { ChangeDetectorRef, Inject } from '@angular/core';
+import { Component, type OnInit } from '@angular/core';
 import { NavCardDto } from './dto/nav-card.dto';
 import { NavCardModel } from './class/nav-card.model';
 import { RouterModule } from '@angular/router';
@@ -11,13 +12,12 @@ import { RouterModule } from '@angular/router';
     CommonModule, RouterModule
   ],
   templateUrl: './nav.component.html',
-  styleUrl: './nav.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  styleUrl: './nav.component.scss'
 })
 export class NavComponent implements OnInit {
 
   items: NavCardDto[]
-
+  name: string = ""
   constructor() {
     this.items = new NavCardModel().getNavCardItems()
   }

@@ -1,12 +1,12 @@
 <section class="nav-card">
     @for (item of items; track $index) {
-        <section class="nav-card-item" [routerLink]="['/projects']" routerLinkActive="router-link-active" >
+        <main class="nav-card-item" [routerLink]="[item.route]" routerLinkActive="router-link-active" >
             <div class="nav-card-icon">
                 <i [ngClass]='item.iconName + " " + item.iconSize'></i>
             </div>
             <div class="nav-card-label">
                 {{ item.label }}
             </div>
-        </section>
+        </main>
     }
 </section>
