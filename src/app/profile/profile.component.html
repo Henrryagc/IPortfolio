@@ -1,9 +1,48 @@
 
+<picture>
+
+</picture>
+
 <section class="content-img">
     <img src="assets/imgs/garou.webp" alt="">
 </section>
 
-<p>profile works!</p>
-<p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates eaque officia aspernatur quo nesciunt molestiae consequuntur iste facere magni dolorem saepe natus, aut quia molestias quidem laboriosam tempore facilis similique?
-</p>
+
+<header>
+    <h2>Henrry Gutierrez</h2>
+    <div class="subtitle-container">
+        <h3>Full Stack Dev</h3>
+    </div>
+    <div class="social-media-container">
+        @for (item of socialMediaItems; track $index) {
+            <a href="http://"> <span [ngClass]="item.icon">icon</span> </a>
+        }
+    </div>
+</header>
+
+
+<main>
+    @for (item of informationItems; track $index) {
+        <div class="information-container">
+            <span>icon</span>
+            <div class="detail-container">
+                <span class="title">title</span>
+                @switch (item.type) {
+                    @case ('phone') {
+
+                        <h3><a href="tel:+5109090">{{item.information}}</a></h3>
+                    }
+
+                    @case ('email') {
+                        <h3><a href="mailto:">{{item.information}}</a></h3>
+                    }
+
+                    @default {
+                        <h3>item.information</h3>
+                    }
+                }
+            </div>
+        </div>
+
+    }
+</main>

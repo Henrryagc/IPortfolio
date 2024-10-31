@@ -13,6 +13,51 @@ import { ChangeDetectionStrategy, Component, type OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
+socialMediaItems = [
+  {
+    'url': '',
+    'icon': 'bx bxs-facebook '
+  },
+  {
+    'url': '',
+    'icon': 'bx bxs-facebook '
+  },
+  {
+    'url': '',
+    'icon': 'bx bxs-facebook '
+  },
+  {
+    'url': '',
+    'icon': 'bx bxs-facebook '
+  }
+]
+
+informationItems = [
+  {
+    'icon':'bx phone',
+    'title': 'Phone',
+    'information': '+51 999999',
+    'type': 'phone'
+  },
+  {
+    'icon':'bx phone',
+    'title': 'Phone',
+    'information': 'dends@gmail.com',
+    'type': 'email'
+  },
+  {
+    'icon':'bx phone',
+    'title': 'Phone',
+    'information': 'dasd@gmail.com',
+    'type': 'email'
+  },
+  {
+    'icon':'bx phone',
+    'title': 'Phone',
+    'information': 'test@gmail.com',
+    'type': 'email'
+  }
+]
   ngOnInit(): void { }
 
 }
