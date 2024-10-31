@@ -5,11 +5,11 @@ import { ContactComponent } from './main-content/pages/contact/contact.component
 import { HomeComponent } from './main-content/pages/home/home.component';
 import { ProjectsComponent } from './main-content/pages/projects/projects.component';
 import { MainContentComponent } from './main-content/main-content.component';
+import { AppComponent } from './app.component';
 
 const routes: Routes = [
   {
     path: '', // iportfolio
-    component: MainContentComponent,
     children: [
       {
         path: 'home',
