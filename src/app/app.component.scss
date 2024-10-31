@@ -16,16 +16,26 @@ section {
     box-shadow: 0px 10px 37px -9px rgba(0,0,0,0.75);
     -webkit-box-shadow: 0px 10px 37px -9px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 10px 37px -9px rgba(0,0,0,0.75);
+    overflow: visible;
 }
 
 aside {
-    width: 18rem;;
+    width: 18rem;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 6rem;
 }
 
 main {
     width: 48rem;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
 }
 
 nav {
     width: 5.8rem;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 1rem;
 }
