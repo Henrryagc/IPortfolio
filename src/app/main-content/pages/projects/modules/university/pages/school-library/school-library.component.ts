@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, ReactiveFormsModule } from '@angular/forms';
+import { NgIf } from '@angular/common';
 
 @Component({
     selector: 'app-school-library',
     templateUrl: './school-library.component.html',
     styleUrls: ['./school-library.component.scss'],
-    standalone: false
+    imports: [ReactiveFormsModule, NgIf]
 })
 export class SchoolLibraryComponent {
 

@@ -21,32 +21,30 @@ import { FooterComponent } from "./footer/footer.component";
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    AboutMeComponent,
-    ProjectsComponent,
-    ContactComponent,
-    HomeComponent
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    AppRoutingModule,
-    ServiceWorkerModule.register('ngsw-worker.js', {
-        enabled: environment.production,
-        // Register the ServiceWorker as soon as the application is stable
-        // or after 30 seconds (whichever comes first).
-        registrationStrategy: 'registerWhenStable:30000'
-    }),
-    SwiperModule,
-    PersonalModule,
-    ProfileComponent,
-    MainContentComponent,
-    NavComponent,
-    HeaderComponent,
-    FooterComponent
-],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [AppComponent],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        AppRoutingModule,
+        ServiceWorkerModule.register('ngsw-worker.js', {
+            enabled: environment.production,
+            // Register the ServiceWorker as soon as the application is stable
+            // or after 30 seconds (whichever comes first).
+            registrationStrategy: 'registerWhenStable:30000'
+        }),
+        SwiperModule,
+        PersonalModule,
+        ProfileComponent,
+        MainContentComponent,
+        NavComponent,
+        HeaderComponent,
+        FooterComponent,
+        AboutMeComponent,
+        ProjectsComponent,
+        ContactComponent,
+        HomeComponent
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
