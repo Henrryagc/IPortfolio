@@ -6,10 +6,11 @@ import SwiperCore, { Pagination, SwiperOptions, Navigation } from "swiper";
 SwiperCore.use([Pagination, Navigation]);
 
 @Component({
-  selector: 'app-projects',
-  templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.scss'],
-  encapsulation: ViewEncapsulation.None,
+    selector: 'app-projects',
+    templateUrl: './projects.component.html',
+    styleUrls: ['./projects.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    standalone: false
 })
 export class ProjectsComponent implements OnInit {
 

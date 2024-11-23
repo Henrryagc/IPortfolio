@@ -3,14 +3,13 @@ import { ChangeDetectionStrategy, Component, type OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-main-content',
-  standalone: true,
-  imports: [
-    CommonModule, RouterModule
-  ],
-  templateUrl: './main-content.component.html',
-  styleUrl: './main-content.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-main-content',
+    imports: [
+        CommonModule, RouterModule
+    ],
+    templateUrl: './main-content.component.html',
+    styleUrl: './main-content.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MainContentComponent implements OnInit {
 

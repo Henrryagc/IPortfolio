@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
 @Component({
-  selector: 'app-school-library',
-  templateUrl: './school-library.component.html',
-  styleUrls: ['./school-library.component.scss']
+    selector: 'app-school-library',
+    templateUrl: './school-library.component.html',
+    styleUrls: ['./school-library.component.scss'],
+    standalone: false
 })
 export class SchoolLibraryComponent {
 
