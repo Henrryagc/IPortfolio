@@ -1,3 +1,4 @@
+
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, type OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
@@ -9,7 +10,8 @@ import { RouterModule } from '@angular/router';
     ],
     templateUrl: './main-content.component.html',
     styleUrl: './main-content.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true
 })
 export class MainContentComponent implements OnInit {
 

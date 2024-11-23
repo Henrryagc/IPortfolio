@@ -11,7 +11,8 @@ SwiperCore.use([Pagination, Navigation]);
     templateUrl: './projects.component.html',
     styleUrls: ['./projects.component.scss'],
     encapsulation: ViewEncapsulation.None,
-    imports: [NgFor]
+    imports: [NgFor],
+    standalone: true
 })
 export class ProjectsComponent implements OnInit {
 
@@ -23,7 +24,7 @@ export class ProjectsComponent implements OnInit {
     pagination: { clickable: true },
     scrollbar: { draggable: true },
   };
-  
+
   constructor() { }
 
   ngOnInit(): void {

@@ -14,7 +14,7 @@ import { FooterComponent } from './footer/footer.component';
     animations: [
         fader
     ],
-    imports: [HeaderComponent, ProfileComponent, MainContentComponent, NavComponent, FooterComponent]
+    imports: [HeaderComponent, ProfileComponent, MainContentComponent, NavComponent, FooterComponent],
 })
 export class AppComponent {
 
@@ -23,8 +23,8 @@ export class AppComponent {
   title = 'iportfolio';
 
 
-  prepareRoute(outlet: RouterOutlet) {
+  /*prepareRoute(outlet: RouterOutlet) {
     return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
-  }
+  }*/
 
 }

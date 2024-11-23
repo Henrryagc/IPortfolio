@@ -4,7 +4,8 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
     selector: 'app-contact',
     templateUrl: './contact.component.html',
     styleUrls: ['./contact.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true
 })
 export class ContactComponent implements OnInit {
 

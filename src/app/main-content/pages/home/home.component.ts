@@ -1,10 +1,12 @@
-import { Component, HostListener, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ChangeDetectionStrategy, Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
     selector: 'app-home',
     templateUrl: './home.component.html',
-    styleUrls: ['./home.component.scss']
+    styleUrls: ['./home.component.scss'],
+    imports: [],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true
 })
 export class HomeComponent implements OnInit {
 
@@ -12,7 +14,7 @@ export class HomeComponent implements OnInit {
 
   items = [1,2,3,4,5,6,4,8,5,4,1,2,4,5];
 
-  constructor(private route: Router) { }
+  constructor() { }
 
   ngOnInit(): void {
     // this.underscore()
@@ -21,7 +23,7 @@ export class HomeComponent implements OnInit {
   @HostListener('document:keypress', ['$event'])
   handleKeyboardEvent(event: KeyboardEvent) {
     if('n' == event.key || 'N' == event.key) {
-      this.route.navigateByUrl("projects");
+      // this.route.navigateByUrl("projects");
       console.log(event.key);
     }
     console.log(event);

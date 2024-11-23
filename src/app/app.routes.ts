@@ -1,13 +1,10 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes } from '@angular/router';
 import { AboutMeComponent } from './main-content/pages/about-me/about-me.component';
 import { ContactComponent } from './main-content/pages/contact/contact.component';
 import { HomeComponent } from './main-content/pages/home/home.component';
 import { ProjectsComponent } from './main-content/pages/projects/projects.component';
-import { MainContentComponent } from './main-content/main-content.component';
-import { AppComponent } from './app.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   {
     path: '', // iportfolio
     children: [
@@ -24,10 +21,6 @@ const routes: Routes = [
         data: {
           // animation: 'isRight'
         },
-        children: [
-          { path: 'university', loadChildren: () => import('./main-content/pages/projects/modules/university/university.module').then(m => m.UniversityModule) },
-          { path: 'personal', loadChildren: () => import('./main-content/pages/projects/modules/personal/personal.module').then(m => m.PersonalModule) },
-        ]
       },
       {
         path: 'about-me',
@@ -45,11 +38,20 @@ const routes: Routes = [
   },
 ];
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes, {
-    scrollPositionRestoration: 'enabled',
-    anchorScrolling: 'enabled'
-  })],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }
+/*
+export const routes: Routes = [
+    {
+        path: 'login',
+        title: 'Iniciar',
+        loadComponent: () => import("./pages/login/login.component").then(c => c.LoginComponent)
+    },
+    {
+        path: 'sales-icecream',
+        title: 'Ventas',
+        loadComponent: () => import("./pages/sales-icecream/sales-icecream.component").then(c => c.SalesIcecreamComponent)
+    },
+    { path: '',   redirectTo: 'sales-icecream', pathMatch: 'full' },
+    { path: '**', redirectTo: 'sales-icecream'},
+    // { path: '**', component: PageNotFoundComponent },
+];
+*/

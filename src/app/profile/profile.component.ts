@@ -8,7 +8,8 @@ import { ChangeDetectionStrategy, Component, type OnInit } from '@angular/core';
     ],
     templateUrl: './profile.component.html',
     styleUrl: './profile.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true
 })
 export class ProfileComponent implements OnInit {
 
