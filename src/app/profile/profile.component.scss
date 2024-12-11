@@ -2,7 +2,7 @@
   display: block;
 }
 
-img {
+#img-profile {
   height: 9rem;
   width: 12rem;
   border-radius: 1rem;
@@ -21,7 +21,7 @@ p {
   line-height: normal;
 }
 
-header {
+#profile-header {
   margin: 1rem 0;
   display: flex;
   flex-direction: column;
@@ -55,24 +55,35 @@ header {
   }
 }
 
-main {
+#profile-container {
   margin-top: 3rem;
   padding: 1rem;
   border-radius: .5rem;
   background: #fa8072;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 1rem;
 
-  .information-container {
-    display: flex;
-    flex-direction: row;
-    gap: .5rem;
-  }
+  /*.information-container {
+
+  }*/
 
   .detail-container {
     display: flex;
     flex-direction: column;
     gap: .5rem;
   }
+}
+
+.icon-img {
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: .2rem;
+  padding: .4rem;
+  border: 0.0rem solid #ffffff;
+  background-color: #ffffff;
+}
+
+.info-icon {
+  font-size: 2.5rem;
 }

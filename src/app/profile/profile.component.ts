@@ -12,51 +12,56 @@ import { ChangeDetectionStrategy, Component, type OnInit } from '@angular/core';
     standalone: true
 })
 export class ProfileComponent implements OnInit {
-
+private pathIcons = './assets/icons/';
+private pathProfileIcons = './assets/icons/profile/';
 socialMediaItems = [
   {
     'url': '',
-    'icon': 'bx bxs-facebook '
+    'icon': this.pathIcons + 'iconfinder_github_icon.svg'
   },
   {
     'url': '',
-    'icon': 'bx bxs-facebook '
+    'icon': this.pathIcons + 'iconfinder_linkedin_icon.svg'
   },
   {
     'url': '',
-    'icon': 'bx bxs-facebook '
+    'icon': this.pathIcons + 'iconfinder_phone_icon.svg'
   },
   {
     'url': '',
-    'icon': 'bx bxs-facebook '
+    'icon': this.pathIcons + 'iconfinder_gmail_icon.svg'
   }
 ]
 
 informationItems = [
   {
-    'icon':'bx phone',
-    'title': 'Phone',
-    'information': '+51 999999',
-    'type': 'phone'
+    'icon': this.pathProfileIcons + 'java_icon.svg',
+    'title': 'Java'
   },
   {
-    'icon':'bx phone',
-    'title': 'Phone',
-    'information': 'dends@gmail.com',
-    'type': 'email'
+    'icon': this.pathProfileIcons + 'angular_icon.svg',
+    'title': 'Angular'
   },
   {
-    'icon':'bx phone',
-    'title': 'Phone',
-    'information': 'dasd@gmail.com',
-    'type': 'email'
+    'icon': this.pathProfileIcons + 'typescript_icon.svg',
+    'title': 'Typescript'
   },
   {
-    'icon':'bx phone',
-    'title': 'Phone',
-    'information': 'test@gmail.com',
-    'type': 'email'
-  }
+    'icon': this.pathProfileIcons + 'html_icon.svg',
+    'title': 'HTML'
+  },
+  {
+    'icon': this.pathProfileIcons + 'css_icon.svg',
+    'title': 'CSS'
+  },
+  {
+    'icon': this.pathProfileIcons + 'bootstrap_icon.svg',
+    'title': 'Bootstrap'
+  },
+  {
+    'icon': this.pathProfileIcons + 'git_icon.svg',
+    'title': 'Git'
+  },
 ]
   ngOnInit(): void { }
 

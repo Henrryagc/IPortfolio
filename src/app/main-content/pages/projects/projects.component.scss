@@ -4,16 +4,26 @@
   padding: .5rem;
 }
 
-header {
+#projects-header {
   height: 6rem;
   position: sticky;
   top: 0;
   z-index: 99;
 }
 
-header a {
+#projects-header a {
   text-decoration: none;
   color: wheat;
+  h2 {
+    margin: 0;
+    font-size: 24px;
+  }
+
+  p {
+    margin-top: 5px;
+    font-size: 18px;
+    opacity: 0.8;
+  }
 }
 
 nav {
@@ -51,16 +61,7 @@ nav {
   margin-bottom: 10px;
 }
 
-h2 {
-  margin: 0;
-  font-size: 24px;
-}
 
-p {
-  margin-top: 5px;
-  font-size: 18px;
-  opacity: 0.8;
-}
 
 .social-links {
   margin-top: 20px;
