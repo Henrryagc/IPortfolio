@@ -1,6 +1,6 @@
 {
   "name": "iportfolio",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -22,8 +22,7 @@
     "boxicons": "^2.1.4",
     "rxjs": "~6.6.0",
     "swiper": "^8.4.5",
-    "tslib": "^2.3.0",
-    "zone.js": "~0.15.0"
+    "tslib": "^2.3.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^19.0.6",
