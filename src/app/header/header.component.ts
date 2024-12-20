@@ -7,7 +7,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         CommonModule,
     ],
     templateUrl: './header.component.html',
-    styleUrl: './header.component.css',
+    styleUrl: './header.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
     standalone: true
 })
