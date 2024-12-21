@@ -1,3 +1,5 @@
+@use 'src/assets/scss/colors';
+
 :host {
   display: block;
 }
@@ -5,5 +7,5 @@
 footer {
   height: 90px;
   margin-top: 16px;
-  background-color: salmon;
+  background-color: colors.$blue;
 }
