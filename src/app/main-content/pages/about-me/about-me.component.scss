@@ -1,61 +1,27 @@
-section {
-  position: sticky;
-  top: 0;
-  z-index: 99;
+@use 'src/assets/scss/colors';
+
+:host {
+  display: block;
 }
 
-.card {
-  width: 350px;
-  overflow: hidden;
-  box-shadow: 0px 10px 37px -9px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 0px 10px 37px -9px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 10px 37px -9px rgba(0,0,0,0.75);
-}
-
-img {
-  margin: 16px;
-  object-fit: cover;
-  border-radius: 8px;
-  max-width: 90%;
-  transition: transform 500ms ease-in;
-}
-
-img:hover {
-  max-height: 90%;
-    transform: scale(1.3);
-    transition: transform 500ms ease-out;
-    transition-delay: 500ms;
-
-}
-
-.card-content {
-  margin: 16px;
-  background-color: crimson;
-  transition: transform 500ms ease-out;
-  height: 90px;
-}
-
-.card-content:hover {
-  transition: transform 500ms ease-out;
-  transform: translateY(-90px);
-  height: 190px;
-}
-
-
-
-#parentdiv {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    background-color: #ac5;
-    border-radius: 150px;
-    margin: 150px;
+#about-me-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: .8rem;
+  h1 {
+    color: colors.$primary;
+    margin: 0;
   }
-
-  .div2 {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    background-color: #ac5;
-    border-radius: 100px;
+  span {
+    width: 2.5rem;
+    color: colors.$gray;
+    margin: 0;
+    border-bottom: .2rem solid colors.$yellow;
+    align-self: flex-end;
   }
+}
+
+#about-me-container {
+  padding: 0 1.5rem;
+}
