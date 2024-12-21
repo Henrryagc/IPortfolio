@@ -9,6 +9,11 @@ export const routes: Routes = [
     path: '', // iportfolio
     children: [
       {
+        path: 'about-me',
+        title: 'Henry Gutierrez',
+        component: AboutMeComponent
+      },
+      {
         path: 'home',
         component: HomeComponent,
         data: {
@@ -17,14 +22,11 @@ export const routes: Routes = [
       },
       {
         path: 'projects',
+        title: 'Projects',
         component: ProjectsComponent,
         data: {
           // animation: 'isRight'
         },
-      },
-      {
-        path: 'about-me',
-        component: AboutMeComponent
       },
       {
         path: 'contact',
@@ -32,7 +34,7 @@ export const routes: Routes = [
       },
       {
         path: '**',
-        redirectTo: 'home'
+        redirectTo: 'about-me'
       }
     ]
   },
