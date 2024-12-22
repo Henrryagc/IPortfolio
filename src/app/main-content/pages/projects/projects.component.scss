@@ -1,3 +1,5 @@
+@use 'src/assets/scss/colors';
+
 .title {
   font-size: xx-large;
   margin: .5rem;
@@ -9,11 +11,13 @@
   position: sticky;
   top: 0;
   z-index: 99;
+  background: colors.$yellow;
+  color: colors.$dark;
 }
 
 #projects-header a {
   text-decoration: none;
-  color: wheat;
+  color: colors.$dark;
   h2 {
     margin: 0;
     font-size: 24px;
@@ -26,12 +30,13 @@
   }
 }
 
-nav {
+#projects-nav {
   display: flex;
   justify-content: flex-end;
   gap: 1.5rem;
   padding-right: 2rem;
 }
+
 .projects {
   display: flex;
   justify-content: center;

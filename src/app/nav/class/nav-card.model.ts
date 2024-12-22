@@ -10,10 +10,22 @@ export class  NavCardModel {
             route: "about-me"
         },
         <NavCardDto>{
-            iconName: "bx bxs-server",
+            iconName: "bx bx-code-alt",
+            iconSize: this.iconSize,
+            label: "EXPERIENCE",
+            route: "experience"
+        },
+        <NavCardDto>{
+            iconName: "bx bxs-briefcase-alt-2",
             iconSize: this.iconSize,
             label: "PROJECTS",
             route: "projects"
+        },
+        <NavCardDto>{
+            iconName: "bx bx-certification",
+            iconSize: this.iconSize,
+            label: "CERT.",
+            route: "certifications"
         },
         /*<NavCardDto>{
             iconName: "bx bx-user",
