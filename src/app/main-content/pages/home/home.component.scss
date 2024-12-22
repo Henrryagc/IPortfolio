@@ -2,75 +2,14 @@
 @use 'src/assets/scss/colors';
 
 header {
-  height: 4rem;
-  background-color: darksalmon;
-}
+  border-radius: .4rem;
+  color: colors.$white;
 
-.card {
-  height: 250px;
-}
-
-
-/***  scroll bar style  ***/
-::-webkit-scrollbar {
-  width: 6px;
-  overflow-y: scroll;
-  background: grey;
-  box-shadow: inset 0 0 4px #707070;
-  border-radius: 8px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: salmon;
-  border-radius: 8px;
-}
-
-header {
-  margin: 26px;
-  .say-hello {
-    display: flex;
-    justify-content: center;
-  }
-
-  .say-hello-content {
-    display: flex;
-    align-items: baseline;
-    gap: 8px;
-    color: colors.$yellow;
-    font-size: 2em;
-    font-family: monospace;
-    white-space: nowrap;
-    border-right: 4px solid;
-    width: 31ch;
-    animation: typing 2s steps(31), blink 0.5s infinite step-end alternate;
-    overflow: hidden;
-
-    h2 {
-      font-weight: 700;
-      color: colors.$dark;
-      background: colors.$yellow;
-      padding: 6px;
-      border-radius: 6px;
-    }
-
-    h3 {
-      color: colors.$gray;
-    }
-
-  }
-  @keyframes typing {
-    from {
-      width: 0;
-    }
-  }
-
-  @keyframes blink {
-    50% {
-      border-color: transparent;
-    }
+  h2 {
+    padding: 1rem;
   }
 }
-
+/*
 
 /*.main {
   display: flex;
@@ -86,6 +25,7 @@ header {
   transform: translate(-50%, -50%);   */
 // }
 
+/*
 main {
   .home-content {
     max-width: 600px;
@@ -99,17 +39,15 @@ main {
     justify-content: center;
     align-items: center;
 
-  p {
-    font-family: victor;
-    text-align: left;
-    color: colors.$gray;
-    line-height: normal;
+    p {
+      font-family: victor;
+      text-align: left;
+      color: colors.$gray;
+      line-height: normal;
+    }
   }
-
-  }
-
 }
-
+*/
 
 
 
@@ -132,4 +70,157 @@ footer {
     gap: 16px;
     border-radius: 8px;
   }
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 1rem auto;
+  padding: 40px 0;
+}
+
+/* Line  */
+.timeline::before {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background: linear-gradient(180deg, #6366f1, #8b5cf6, #d946ef);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 3px;
+}
+
+.timeline-item {
+  padding: 10px 40px;
+  position: relative;
+  width: calc(50% - 40px);
+  opacity: 0;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.left {
+  left: -2.4rem;
+}
+
+.right {
+  left: 23.7rem;
+}
+
+.timeline-content {
+  padding: 25px;
+  background: colors.$white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.timeline-content::before {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: colors.$white;
+  top: 30px;
+}
+
+.left .timeline-content::before {
+  right: -12px;
+  transform: rotate(45deg);
+  border-radius: .4rem;
+}
+
+.right .timeline-content::before {
+  left: -12px;
+  transform: rotate(45deg);
+  border-radius: .4rem;
+}
+
+.timeline-dot {
+  width: 30px;
+  height: 30px;
+  background: colors.$yellow;
+  border-radius: 50%;
+  position: absolute;
+  top: 25px;
+  border: 4px solid white;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.left .timeline-dot {
+  right: -55px;
+}
+
+.right .timeline-dot {
+  left: -55px;
+}
+
+.timeline-date {
+  color: #6366f1;
+  font-weight: 600;
+  font-size: 1.8em;
+  margin: 0;
+}
+
+.timeline-title {
+  color: #1f2937;
+  font-size: 1.25em;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.timeline-description {
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.timeline-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.skill-tag {
+  background: #f3f4f6;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85em;
+  color: #6366f1;
+  font-weight: 500;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.timeline-end {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(45deg, #6366f1, #8b5cf6, #d946ef);
+  background-size: 200% 200%;
+  animation: gradientFlow 3s ease infinite;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -20px;
+  border: 6px solid white;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
 }
