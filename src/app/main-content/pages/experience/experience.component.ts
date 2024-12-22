@@ -1,14 +1,14 @@
 import { ChangeDetectionStrategy, Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
-    selector: 'app-home',
-    templateUrl: './home.component.html',
-    styleUrls: ['./home.component.scss'],
+    selector: 'app-experience',
+    templateUrl: './experience.component.html',
+    styleUrls: ['./experience.component.scss'],
     imports: [],
     changeDetection: ChangeDetectionStrategy.OnPush,
     standalone: true
 })
-export class HomeComponent implements OnInit {
+export class ExperienceComponent implements OnInit {
 
   isTrue = true;
 
