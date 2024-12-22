@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { AboutMeComponent } from './main-content/pages/about-me/about-me.component';
-import { ContactComponent } from './main-content/pages/contact/contact.component';
-import { HomeComponent } from './main-content/pages/home/home.component';
+import { CertificationsComponent } from './main-content/pages/certifications/certifications.component';
+import { ExperienceComponent } from './main-content/pages/experience/experience.component';
 import { ProjectsComponent } from './main-content/pages/projects/projects.component';
 
 export const routes: Routes = [
@@ -14,23 +14,23 @@ export const routes: Routes = [
         component: AboutMeComponent
       },
       {
-        path: 'home',
-        component: HomeComponent,
+        path: 'experience',
+        component: ExperienceComponent,
         data: {
           // animation: 'isRight'
         }
       },
       {
         path: 'projects',
-        title: 'Projects',
+        title: 'Experience',
         component: ProjectsComponent,
         data: {
           // animation: 'isRight'
         },
       },
       {
-        path: 'contact',
-        component: ContactComponent
+        path: 'certifications',
+        component: CertificationsComponent
       },
       {
         path: '**',
