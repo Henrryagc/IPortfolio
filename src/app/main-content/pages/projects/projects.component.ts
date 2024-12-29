@@ -2,6 +2,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 // import Swiper core and required modules
 import SwiperCore, { Pagination, SwiperOptions, Navigation } from "swiper";
 import { NgFor } from '@angular/common';
+import { MainContentHeaderComponent } from '../../components/main-content-header/main-content-header.component';
 
 // install Swiper modules
 SwiperCore.use([Pagination, Navigation]);
@@ -11,7 +12,7 @@ SwiperCore.use([Pagination, Navigation]);
     templateUrl: './projects.component.html',
     styleUrls: ['./projects.component.scss'],
     encapsulation: ViewEncapsulation.None,
-    imports: [NgFor],
+    imports: [NgFor, MainContentHeaderComponent],
     standalone: true
 })
 export class ProjectsComponent implements OnInit {

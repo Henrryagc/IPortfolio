@@ -1,10 +1,13 @@
 import { ChangeDetectionStrategy, Component, HostListener, OnInit } from '@angular/core';
+import { MainContentHeaderComponent } from '../../components/main-content-header/main-content-header.component';
 
 @Component({
     selector: 'app-experience',
     templateUrl: './experience.component.html',
     styleUrls: ['./experience.component.scss'],
-    imports: [],
+    imports: [
+      MainContentHeaderComponent
+    ],
     changeDetection: ChangeDetectionStrategy.OnPush,
     standalone: true
 })
