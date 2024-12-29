@@ -8,6 +8,17 @@
   "projects": {
     "iportfolio": {
       "projectType": "application",
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "en": {
+            "translation": "src/locale/main.en.xlf"
+          },
+          "es": {
+            "translation": "src/locale/main.es.xlf"
+          }
+        }
+      },
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
@@ -27,7 +38,9 @@
               "base": "dist/iportfolio"
             },
             "index": "src/index.html",
-            "polyfills": [],
+            "polyfills": [
+              "@angular/localize/init"
+            ],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
@@ -103,7 +116,10 @@
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
+            "polyfills": [
+              "src/polyfills.ts",
+              "@angular/localize/init"
+            ],
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "inlineStyleLanguage": "scss",
