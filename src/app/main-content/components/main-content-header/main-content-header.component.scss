@@ -1,0 +1,20 @@
+@use 'src/assets/scss/colors';
+
+#main-content-header {
+  display: flex;
+  align-items: center;
+  margin: 2rem 0;
+  gap: .8rem;
+  h1 {
+    text-wrap-mode: nowrap;
+    color: colors.$primary;
+    margin: 0;
+  }
+  span {
+    width: 100%;
+    color: colors.$gray;
+    margin: 0;
+    border-bottom: .2rem solid colors.$yellow;
+    align-self: flex-end;
+  }
+}
