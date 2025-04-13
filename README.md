@@ -23,3 +23,6 @@ instagram https://assets9.lottiefiles.com/packages/lf20_xh8sdzyb.json
 
 # Editor to markdown
 https://dile-components.polydile.com/components/dile-editor/
+
+# commands
+ng g c "filename" --style=scss

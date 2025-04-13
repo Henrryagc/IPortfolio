@@ -12,10 +12,10 @@
         "sourceLocale": "en-US",
         "locales": {
           "en": {
-            "translation": "src/locale/main.en.xlf"
+            "translation": "src/locale/messages.en.xlf"
           },
           "es": {
-            "translation": "src/locale/main.es.xlf"
+            "translation": "src/locale/messages.es.xlf"
           }
         }
       },
