@@ -23,3 +23,9 @@ body {
 .space-s {
     height: .5rem;
 }
+
+main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
