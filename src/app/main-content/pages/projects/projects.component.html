@@ -1,29 +1,32 @@
 <app-main-content-header [title]="'Projects'" />
 
-<header id="projects-header">
-  <div class="title">
-    Projects
-  </div>
-  <nav id="projects-nav">
-    <a href="">All</a>
-    <a href="">Full Stack</a>
-    <a href="">Frontend</a>
-    <a href="">Backend</a>
-    <a href="">Mobile</a>
+<header class="projects__header">
+  <nav class="projects__nav">
+    <a href="#" class="projects__nav-link projects__nav-link--active">All</a>
+    <a href="#" class="projects__nav-link">Full Stack</a>
+    <a href="#" class="projects__nav-link">Frontend</a>
+    <a href="#" class="projects__nav-link">Backend</a>
+    <a href="#" class="projects__nav-link">Mobile</a>
   </nav>
 </header>
 
-<section class="projects-container">
+<section class="projects__grid">
   @for (item of projects; track item.title) {
-    <div class="card">
-      <img [src]="item.icon" alt="Avatar" class="avatar" loading="lazy">
-      <h2> {{ item.title }} </h2>
-      <p>{{ item.description }}</p>
-      <div class="tec-container">
-        @for (tag of item.tecnologies; track tag) {
-          <span class="tag">{{ tag }}</span>
-        }
+    <div class="projects__card">
+      <div class="projects__card-content">
+        <img [src]="item.icon" alt="" class="projects__card-icon" loading="lazy">
+        <h2 class="projects__card-title"> {{ item.title }} </h2>
+        <p class="projects__card-description">{{ item.description }}</p>
+        <div class="projects__card-tags">
+          @for (tag of item.tecnologies; track tag) {
+            <span class="projects__card-tag">{{ tag }}</span>
+          }
+        </div>
       </div>
+      <footer class="projects__card-footer">
+        <a href="#" class="projects__card-link">GitHub <img src="assets/icons/iconfinder_github_icon.svg" alt="GitHub"></a>
+        <a href="#" class="projects__card-link">Live Demo <span>&#8599;</span></a>
+      </footer>
     </div>
   }
 </section>

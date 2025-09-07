@@ -1,39 +1,159 @@
 @use 'src/assets/scss/colors';
 
-.title {
-  font-size: xx-large;
-  margin: .5rem;
-  padding: .5rem;
-}
-
-#projects-header {
-  height: 6rem;
+// Header and Navigation
+.projects__header {
+  padding: 1rem 2rem;
+  background-color: colors.$dark;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
   position: sticky;
   top: 0;
-  z-index: 99;
-  background: colors.$yellow;
-  color: colors.$dark;
+  z-index: 10;
 }
 
-#projects-header a {
+.projects__nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.projects__nav-link {
   text-decoration: none;
-  color: colors.$dark;
-  h2 {
-    margin: 0;
-    font-size: 24px;
+  color: colors.$gray;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: colors.$white;
+    background-color: rgba(colors.$yellow, 0.2);
   }
 
-  p {
-    margin-top: 5px;
-    font-size: 18px;
-    opacity: 0.8;
+  &--active {
+    color: colors.$dark;
+    background-color: colors.$yellow;
   }
 }
 
-#projects-nav {
+// Projects Grid
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 0 1.5rem;
+}
+
+// Project Card
+.projects__card {
+  background: linear-gradient(145deg, #3D454A, #2c3135);
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 0.75rem;
+    border: 2px solid transparent;
+    background: linear-gradient(145deg, colors.$yellow, #d946ef) border-box;
+    -webkit-mask:
+      linear-gradient(#fff 0 0) padding-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+.projects__card-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.projects__card-icon {
+  height: 3rem;
+  width: 3rem;
+  margin-bottom: 1rem;
+  object-fit: contain;
+}
+
+.projects__card-title {
+  font-size: 1.5rem;
+  color: colors.$yellow;
+  margin: 0 0 0.75rem 0;
+}
+
+.projects__card-description {
+  color: colors.$gray;
+  line-height: 1.6;
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+}
+
+.projects__card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.projects__card-tag {
+  background-color: rgba(colors.$yellow, 0.15);
+  color: colors.$yellow;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+// Card Footer
+.projects__card-footer {
   display: flex;
   justify-content: flex-end;
-  gap: 1.5rem;
-  padding-right: 2rem;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  border-top: 1px solid rgba(colors.$gray, 0.2);
+  margin-top: auto;
 }
 
+.projects__card-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: colors.$gray;
+  font-weight: 500;
+
+  &:hover {
+    color: colors.$yellow;
+  }
+
+  img {
+    height: 1.2rem;
+  }
+
+  span {
+    font-size: 1.2rem;
+  }
+}
