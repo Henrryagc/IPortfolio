@@ -24,3 +24,15 @@
 .nav-card-label {
   color: colors.$dark;
 }
+
+.nav-card-icon {
+  color: colors.$dark;
+}
+
+.nav-card-item.router-link-active {
+  background-color: colors.$dark;
+
+  .nav-card-label, .nav-card-icon {
+    color: colors.$yellow;
+  }
+}
