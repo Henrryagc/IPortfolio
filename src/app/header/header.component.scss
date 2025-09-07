@@ -1,64 +1,79 @@
 @use 'src/assets/scss/colors';
 
-/* Extra */
-$primary: #fff;
-$secondary: #ccc;
-$ternary: #272727;
-$dark: #444444;
-/*
-body {
-  background: $secondary;
-  color: $ternary;
-  font-size: 14px;
-  margin: 0;
 
-}*/
+header {
+  background-color: colors.$dark;
+  color: colors.$white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  height: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 
 .logo {
-  max-width: 200px;
-  position: relative;
-  left: 50px;
-  top: 50px;
-  height: 0;
-
+  height: 2.5rem;
 }
 
-nav {
-  margin: 34px;
-  padding: 16px;
-  .nav-container {
-    align-items: center;
-    background: transparent;
-    /*box-shadow: 0 5px 20px rgba(0,0,0,0.2);*/
-    display: flex;
-    flex-direction: row;
-    font-family: sans-serif;
-    padding: 10px 50px;
-  }
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: colors.$yellow;
 }
 
-
-ul {
+.social-links {
   display: flex;
-  gap: 15px;
-  width: 100%;
+  gap: 1.5rem;
   align-items: center;
-  justify-content: center;
 
-  a {
-    text-decoration: none;
-    padding: 0 8px 0 8px;
-    color: #ccc;
-    font-family: Victor;
-    font-size: 1.8em;
+  img {
+    height: 1.5rem;
+    transition: transform 0.2s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.hamburger-menu {
+  display: none; // Hidden on desktop
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+
+  span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: colors.$white;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .social-links {
+    display: none;
   }
 
-  .active-link {
-    /*background-color: yellow;*/
-    color: black;
-    border-bottom: 5px solid colors.$yellow;
-    transition: 0.8s;
-    font-weight: 700;
-    transition: .8s;
+  .hamburger-menu {
+    display: block;
+  }
+
+  .header-container {
+    padding: 0 1.5rem;
   }
 }

@@ -1,18 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
+    selector: 'app-header',
+    imports: [],
+    templateUrl: './header.component.html',
+    styleUrl: './header.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true
 })
-export class HeaderComponent implements OnInit {
-  
-  testString = "casd asd asd";
-  
-  constructor() {}
-
-  ngOnInit(): void {}
-
-  onClick() {    
-  }
-}
+export class HeaderComponent { }

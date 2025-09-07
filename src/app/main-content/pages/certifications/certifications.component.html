@@ -1,0 +1,33 @@
+<app-main-content-header [title]="'Certifications'" />
+
+<section class="certifications__list">
+  @for (cert of certifications; track cert.title) {
+    <div class="certifications__card">
+      <figure class="certifications__card-figure">
+        <img [src]="cert.image" alt="{{ cert.title }} certificate" class="certifications__card-image" loading="lazy">
+        <div class="certifications__card-actions">
+          <button class="certifications__action-btn" (click)="fullscreen(cert.image)">
+            <img src="assets/icons/fullscreen.svg" alt="Fullscreen">
+          </button>
+          <a [href]="cert.link" download class="certifications__action-btn">
+            <img src="assets/icons/download.svg" alt="Download">
+          </a>
+          <a [href]="cert.validationUrl" target="_blank" class="certifications__action-btn">
+            <img src="assets/icons/validate.svg" alt="Validate">
+          </a>
+        </div>
+      </figure>
+      <div class="certifications__card-body">
+        <h3 class="certifications__card-title">{{ cert.title }}</h3>
+        <p class="certifications__card-institute">{{ cert.institute }}</p>
+      </div>
+    </div>
+  }
+</section>
+
+<!-- Modal for fullscreen image -->
+@if (fullscreenImage) {
+  <div class="certifications__modal" (click)="closeFullscreen()">
+    <img [src]="fullscreenImage" alt="Fullscreen Certificate">
+  </div>
+}

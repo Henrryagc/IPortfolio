@@ -1,0 +1,25 @@
+@use 'src/assets/scss/colors';
+
+:host {
+  display: block;
+}
+
+@keyframes text-appear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+p {
+  font-family: 'Victor Mono', monospace;
+  color: colors.$white;
+  line-height: 1.6;
+  font-size: 1.2rem;
+  text-align: left;
+  animation: text-appear 1s ease-out forwards;
+}

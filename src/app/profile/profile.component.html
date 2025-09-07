@@ -1,0 +1,32 @@
+<div class="profile-card">
+  <figure class="profile-card__figure">
+    <img class="profile-card__image" src="assets/imgs/garou.webp" alt="Profile Picture">
+  </figure>
+
+  <header class="profile-card__header">
+    <h2 class="profile-card__name">Henrry Gutierrez</h2>
+    <div class="profile-card__title-wrapper">
+      <h3 class="profile-card__title">Software Engineer</h3>
+    </div>
+    <div class="profile-card__social">
+      @for (item of socialMediaItems; track $index) {
+        <a [href]="item.url" class="profile-card__social-link">
+          <img [src]="item.icon" alt="" class="profile-card__social-icon">
+        </a>
+      }
+    </div>
+  </header>
+
+  <hr class="profile-card__divider">
+
+  <div class="profile-card__info">
+    @for (item of informationItems; track $index) {
+      <div class="profile-card__info-item">
+        <img class="profile-card__info-icon" [src]="item.icon" alt="">
+        <div class="profile-card__info-details">
+          <span class="profile-card__info-title">{{item.title}}</span>
+        </div>
+      </div>
+    }
+  </div>
+</div>

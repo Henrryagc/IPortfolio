@@ -1,0 +1,38 @@
+@use 'src/assets/scss/colors';
+
+:host {
+  display: block;
+}
+
+.nav-card {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+.nav-card-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: .2rem;
+  background-color: colors.$yellow;
+  border-radius: 8px;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.nav-card-label {
+  color: colors.$dark;
+}
+
+.nav-card-icon {
+  color: colors.$dark;
+}
+
+.nav-card-item.router-link-active {
+  background-color: colors.$dark;
+
+  .nav-card-label, .nav-card-icon {
+    color: colors.$yellow;
+  }
+}

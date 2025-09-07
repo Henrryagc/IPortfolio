@@ -1,0 +1,16 @@
+@use 'src/assets/scss/colors';
+
+/* Pie de Página */
+.footer {
+  padding: 20px 0;
+  text-align: center;
+  height: 90px;
+  margin-top: 16px;
+  color: colors.$dark;
+  background-color: colors.$blue;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}

@@ -1,12 +1,82 @@
 @use 'src/assets/scss/colors';
-main {
-    height: 100vh;
-    display: flex;
+
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
-.container {
-    margin: auto;
+
+section {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 6rem 1.5rem 0 1.5rem;
+    flex-grow: 1;
+    /*background-color: #f0f0ff;*/
+}
+
+.content {
+    padding: 16px;
     background-color: colors.$dark;
-    border-radius: 26px;
-    max-width: 1200px;
-    min-width: 900px;
+    border-radius: .8rem;
+    box-shadow: 0px 10px 37px -9px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 10px 37px -9px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 10px 37px -9px rgba(0,0,0,0.75);
+}
+
+aside {
+    width: 18rem;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 6rem;
+    overflow: visible;
+}
+
+main {
+    width: 48rem;
+}
+
+nav {
+    width: 6.8rem;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 1rem;
+}
+
+@media screen and (max-width: 1200px) {
+    aside {
+        display: none;
+    }
+
+    .content {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    aside, nav {
+        display: block;
+        position: static;
+        width: 100%;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    .content {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .content {
+        width: auto;
+    }
 }

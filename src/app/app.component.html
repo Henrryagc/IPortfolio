@@ -1,18 +1,18 @@
 
-<main>
-    <section class="container">
-        <app-header></app-header>
+<app-header/>
 
-        <!-- <main [@routeAnimations]="prepareRoute(outlet)" class="content">
-            <router-outlet #outlet="outlet"></router-outlet>
-        </main> -->
+<section>
+    <aside class="content">
+        <app-profile/>
+    </aside>
 
-        <app-home></app-home>
-        <!--<app-projects></app-projects>
-        <app-about-me></app-about-me>
+    <main class="content">
+        <app-main-content/>
+    </main>
 
-        <router-outlet></router-outlet>-->
+    <nav class="content">
+        <app-nav/>
+    </nav>
+</section>
 
-        <!--<app-bottomnav></app-bottomnav>-->
-    </section>
-</main>
+<app-footer/>
