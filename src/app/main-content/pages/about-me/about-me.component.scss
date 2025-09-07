@@ -4,24 +4,11 @@
   display: block;
 }
 
-#about-me-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 2rem;
-  gap: .8rem;
-  h1 {
-    color: colors.$primary;
-    margin: 0;
-  }
-  span {
-    width: 2.5rem;
-    color: colors.$gray;
-    margin: 0;
-    border-bottom: .2rem solid colors.$yellow;
-    align-self: flex-end;
-  }
-}
 
-#about-me-container {
-  padding: 0 1.5rem;
+p {
+  font-family: 'Victor Mono', monospace;
+  color: colors.$white;
+  line-height: 1.6;
+  font-size: 1rem;
+  text-align: left;
 }
