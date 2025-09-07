@@ -1,13 +1,13 @@
 
-import { CommonModule } from '@angular/common';
+
 import { ChangeDetectionStrategy, Component, type OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
     selector: 'app-main-content',
     imports: [
-        CommonModule, RouterModule
-    ],
+    RouterModule
+],
     templateUrl: './main-content.component.html',
     styleUrl: './main-content.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
