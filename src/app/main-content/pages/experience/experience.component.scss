@@ -89,17 +89,17 @@ footer {
   width: 25px;
   height: 25px;
   background: colors.$white;
-  top: 30px;
+  top: 33px;
 }
 
 .left .timeline-content::before {
-  right: -12px;
+  right: -8px;
   transform: rotate(45deg);
   border-radius: .4rem;
 }
 
 .right .timeline-content::before {
-  left: -12px;
+  left: -8px;
   transform: rotate(45deg);
   border-radius: .4rem;
 }
