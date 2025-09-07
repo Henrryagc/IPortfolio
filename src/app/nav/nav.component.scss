@@ -4,12 +4,6 @@
   display: block;
 }
 
-header {
-  height: 4rem;
-  width: 100vw;
-  background-color: darksalmon;
-}
-
 .nav-card {
   display: flex;
   flex-direction: column;
@@ -24,6 +18,7 @@ header {
   background-color: colors.$yellow;
   border-radius: 8px;
   padding: 6px;
+  cursor: pointer;
 }
 
 .nav-card-label {
