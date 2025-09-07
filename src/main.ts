@@ -2,10 +2,7 @@
 
 import { enableProdMode, importProvidersFrom } from '@angular/core';
 import { environment } from './environments/environment';
-import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
-import { provideAnimations } from '@angular/platform-browser/animations';
-import { ServiceWorkerModule } from '@angular/service-worker';
-import { SwiperModule } from 'swiper/angular';
+import { bootstrapApplication } from '@angular/platform-browser';
 import { AppComponent } from './app/app.component';
 import { appConfig } from './app/app.config';
 

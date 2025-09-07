@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 // import Swiper core and required modules
-import SwiperCore, { Pagination, SwiperOptions, Navigation } from "swiper";
+import { Pagination, Navigation } from "swiper/modules";
+import SwiperCore from 'swiper';
+import { SwiperOptions } from 'swiper/types';
 
 import { MainContentHeaderComponent } from '../../components/main-content-header/main-content-header.component';
 
