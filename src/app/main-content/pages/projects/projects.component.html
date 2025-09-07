@@ -10,23 +10,27 @@
   </nav>
 </header>
 
-<section class="projects__grid">
+<section class="projects__list">
   @for (item of projects; track item.title) {
-    <div class="projects__card">
-      <div class="projects__card-content">
-        <img [src]="item.icon" alt="" class="projects__card-icon" loading="lazy">
+  <div class="projects__card">
+    <img [src]="item.figure" alt="{{ item.title }} icon" class="projects__card-image" loading="lazy">
+    <div class="projects__card-overlay">
+      <div>
         <h2 class="projects__card-title"> {{ item.title }} </h2>
         <p class="projects__card-description">{{ item.description }}</p>
+      </div>
+      <div class="projects__card-bottom">
         <div class="projects__card-tags">
           @for (tag of item.tecnologies; track tag) {
-            <span class="projects__card-tag">{{ tag }}</span>
+          <span class="projects__card-tag">{{ tag }}</span>
           }
         </div>
+        <footer class="projects__card-footer">
+          <a href="#" class="projects__card-link">GitHub <img src="assets/icons/iconfinder_github_icon.svg" alt="GitHub"></a>
+          <a href="#" class="projects__card-link">Live Demo <span>&#8599;</span></a>
+        </footer>
       </div>
-      <footer class="projects__card-footer">
-        <a href="#" class="projects__card-link">GitHub <img src="assets/icons/iconfinder_github_icon.svg" alt="GitHub"></a>
-        <a href="#" class="projects__card-link">Live Demo <span>&#8599;</span></a>
-      </footer>
     </div>
+  </div>
   }
 </section>
