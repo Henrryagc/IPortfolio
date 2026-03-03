@@ -15,24 +15,37 @@
   flex-direction: column;
   align-items: center;
   row-gap: .2rem;
-  background-color: colors.$yellow;
+  background-color: transparent;
   border-radius: 8px;
-  padding: 6px;
+  padding: 8px;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+  &:hover {
+    background-color: rgba(156, 163, 175, 0.1);
+    transform: translateY(-2px);
+  }
 }
 
 .nav-card-label {
-  color: colors.$dark;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 .nav-card-icon {
-  color: colors.$dark;
+  color: var(--text-muted);
+  transition: color 0.3s ease;
 }
 
 .nav-card-item.router-link-active {
-  background-color: colors.$dark;
+  background-color: var(--color-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3);
 
-  .nav-card-label, .nav-card-icon {
-    color: colors.$yellow;
+  .nav-card-label,
+  .nav-card-icon {
+    color: #ffffff; // white text on active color
   }
 }
