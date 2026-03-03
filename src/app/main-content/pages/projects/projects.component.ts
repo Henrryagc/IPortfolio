@@ -3,6 +3,7 @@ import { trigger, transition, style, animate, query, stagger } from '@angular/an
 import { Pagination, Navigation } from "swiper/modules";
 import SwiperCore from 'swiper';
 import { SwiperOptions } from 'swiper/types';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { MainContentHeaderComponent } from '../../components/main-content-header/main-content-header.component';
 
@@ -24,7 +25,7 @@ export const listAnimation = trigger('listAnimation', [
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  imports: [MainContentHeaderComponent],
+  imports: [MainContentHeaderComponent, TranslateModule],
   standalone: true,
   animations: [listAnimation]
 })

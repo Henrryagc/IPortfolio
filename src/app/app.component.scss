@@ -84,10 +84,9 @@ nav {
     }
 }
 
-.theme-toggle-btn {
+.theme-toggle-btn,
+.lang-toggle-btn {
     position: fixed;
-    top: 1.5rem;
-    right: 1.5rem;
     background-color: var(--container-bg);
     border: 1px solid var(--border-color);
     color: var(--text-main);
@@ -112,4 +111,17 @@ nav {
     i {
         font-size: 1.5rem;
     }
+}
+
+.theme-toggle-btn {
+    top: 1.5rem;
+    right: 1.5rem;
+}
+
+.lang-toggle-btn {
+    top: 1.5rem;
+    right: 5.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
 }

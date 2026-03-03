@@ -1,0 +1,32 @@
+{
+    "NAV": {
+        "WHOAMI": "Sobre Mí",
+        "EXPERIENCE": "Experiencia",
+        "PROJECTS": "Proyectos",
+        "CERT.": "Certificados"
+    },
+    "THEME": {
+        "LIGHT": "Cambiar a modo claro",
+        "DARK": "Cambiar a modo oscuro"
+    },
+    "PROFILE": {
+        "TITLE": "Ingeniero de Software",
+        "PHONE": "+591 63518485",
+        "LOCATION": "La Paz, Bolivia",
+        "EMAIL": "ihenrryagc@example.com"
+    },
+    "EXPERIENCE": {
+        "TITLE": "Experiencia"
+    },
+    "PROJECTS": {
+        "TITLE": "Proyectos",
+        "ALL": "Todos",
+        "FULLSTACK": "Full Stack",
+        "FRONTEND": "Frontend",
+        "BACKEND": "Backend",
+        "MOBILE": "Móvil"
+    },
+    "CERTIFICATIONS": {
+        "TITLE": "Certificados"
+    }
+}

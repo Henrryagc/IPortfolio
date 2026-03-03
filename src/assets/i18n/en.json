@@ -1,0 +1,32 @@
+{
+    "NAV": {
+        "WHOAMI": "Who Am I",
+        "EXPERIENCE": "Experience",
+        "PROJECTS": "Projects",
+        "CERT.": "Certificates"
+    },
+    "THEME": {
+        "LIGHT": "Switch to light mode",
+        "DARK": "Switch to dark mode"
+    },
+    "PROFILE": {
+        "TITLE": "Software Engineer",
+        "PHONE": "+591 63518485",
+        "LOCATION": "La Paz, Bolivia",
+        "EMAIL": "ihenrryagc@example.com"
+    },
+    "EXPERIENCE": {
+        "TITLE": "Experience"
+    },
+    "PROJECTS": {
+        "TITLE": "Projects",
+        "ALL": "All",
+        "FULLSTACK": "Full Stack",
+        "FRONTEND": "Frontend",
+        "BACKEND": "Backend",
+        "MOBILE": "Mobile"
+    },
+    "CERTIFICATIONS": {
+        "TITLE": "Certificates"
+    }
+}

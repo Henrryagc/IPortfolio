@@ -1,10 +1,11 @@
 
 import { ChangeDetectionStrategy, Component, type OnInit } from '@angular/core';
 import { Profile } from './class/profile.class';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-profile',
-    imports: [],
+    imports: [TranslateModule],
     templateUrl: './profile.component.html',
     styleUrl: './profile.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
@@ -12,10 +13,10 @@ import { Profile } from './class/profile.class';
 })
 export class ProfileComponent implements OnInit {
 
-socialMediaItems = Profile.getSocialMediaItems();
+    socialMediaItems = Profile.getSocialMediaItems();
 
-informationItems = Profile.getInformationItems();
+    informationItems = Profile.getInformationItems();
 
-ngOnInit(): void { }
+    ngOnInit(): void { }
 
 }
