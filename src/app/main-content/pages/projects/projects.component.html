@@ -1,18 +1,8 @@
 <app-main-content-header [title]="'PROJECTS.TITLE' | translate" />
-
-<!-- <header class="projects__header">
-  <nav class="projects__nav">
-    <a href="#" class="projects__nav-link projects__nav-link--active">All</a>
-    <a href="#" class="projects__nav-link">Full Stack</a>
-    <a href="#" class="projects__nav-link">Frontend</a>
-    <a href="#" class="projects__nav-link">Backend</a>
-    <a href="#" class="projects__nav-link">Mobile</a>
-  </nav>
-</header> -->
-
-<section class="projects__list" [@listAnimation]="projects.length">
-  @for (item of projects; track item.title) {
-    <div class="projects__card">
+<section class="projects__list">
+  @for (item of projects; track item.title; let i = $index) {
+    <div class="projects__card" [style.animation-delay]="(i * 100) + 'ms'"
+      animate.enter="fadeInUp 600ms cubic-bezier(0.35, 0, 0.25, 1) both">
       <img [src]="item.figure" alt="{{ item.title }} icon" class="projects__card-image" loading="lazy">
       <div class="projects__card-overlay">
         <div>

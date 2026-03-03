@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { trigger, transition, style, animate, query, stagger } from '@angular/animations';
 import { Pagination, Navigation } from "swiper/modules";
 import SwiperCore from 'swiper';
 import { SwiperOptions } from 'swiper/types';
@@ -9,25 +8,13 @@ import { MainContentHeaderComponent } from '../../components/main-content-header
 
 SwiperCore.use([Pagination, Navigation]);
 
-export const listAnimation = trigger('listAnimation', [
-  transition('* <=> *', [
-    query(':enter', [
-      style({ opacity: 0, transform: 'translateY(30px)' }),
-      stagger('100ms', [
-        animate('600ms cubic-bezier(0.35, 0, 0.25, 1)', style({ opacity: 1, transform: 'translateY(0)' }))
-      ])
-    ], { optional: true })
-  ])
-]);
-
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss'],
   encapsulation: ViewEncapsulation.None,
   imports: [MainContentHeaderComponent, TranslateModule],
-  standalone: true,
-  animations: [listAnimation]
+  standalone: true
 })
 export class ProjectsComponent implements OnInit {
 
