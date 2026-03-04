@@ -57,6 +57,11 @@ footer {
 }
 
 @keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -177,7 +182,7 @@ footer {
 .timeline-description {
   color: var(--text-muted);
   line-height: 1.7;
-  font-size: 1rem;
+  font-size: .8rem;
   margin-bottom: 1rem;
 }
 

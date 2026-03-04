@@ -29,6 +29,27 @@ export class ExperienceComponent {
       description: 'Designed and implemented comprehensive web application solution to digitize manual laundry operations previously managed through spreadsheets and physical records. Developed integrated system encompassing garment registration, inventory management, and financial administration modules, resulting in significant operational efficiency improvements and streamlined business processes.',
       icon: 'assets/icons/facebook.png',
       tecnologies: ['C#', 'ASP .NET', 'Entity Framework', 'Angular 11', 'Angular Material', 'MySQL', 'Git', 'GitHub', 'NAS Synology']
+    },
+    {
+      year: '2021',
+      title: 'Lavanderia Rosita',
+      description: 'Designed and implemented comprehensive web application solution to digitize manual laundry operations previously managed through spreadsheets and physical records. Developed integrated system encompassing garment registration, inventory management, and financial administration modules, resulting in significant operational efficiency improvements and streamlined business processes.',
+      icon: 'assets/icons/facebook.png',
+      tecnologies: ['C#', 'ASP .NET', 'Entity Framework', 'Angular 11', 'Angular Material', 'MySQL', 'Git', 'GitHub', 'NAS Synology']
+    },
+    {
+      year: '2020',
+      title: 'Lavanderia Rosita',
+      description: 'Designed and implemented comprehensive web application solution to digitize manual laundry operations previously managed through spreadsheets and physical records. Developed integrated system encompassing garment registration, inventory management, and financial administration modules, resulting in significant operational efficiency improvements and streamlined business processes.',
+      icon: 'assets/icons/facebook.png',
+      tecnologies: ['C#', 'ASP .NET', 'Entity Framework', 'Angular 11', 'Angular Material', 'MySQL', 'Git', 'GitHub', 'NAS Synology']
+    },
+    {
+      year: '2019',
+      title: 'Lavanderia Rosita',
+      description: 'Designed and implemented comprehensive web application solution to digitize manual laundry operations previously managed through spreadsheets and physical records. Developed integrated system encompassing garment registration, inventory management, and financial administration modules, resulting in significant operational efficiency improvements and streamlined business processes.',
+      icon: 'assets/icons/facebook.png',
+      tecnologies: ['C#', 'ASP .NET', 'Entity Framework', 'Angular 11', 'Angular Material', 'MySQL', 'Git', 'GitHub', 'NAS Synology']
     }
   ];
 

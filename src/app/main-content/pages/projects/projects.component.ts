@@ -38,10 +38,101 @@ export class ProjectsComponent implements OnInit {
       description: 'Designed and implemented comprehensive web application solution to digitize manual laundry operations previously managed through spreadsheets and physical records. Developed integrated system encompassing garment registration, inventory management, and financial administration modules, resulting in significant operational efficiency improvements and streamlined business processes.',
       figure: 'assets/imgs/garou.webp',
       tecnologies: ['C#', 'ASP .NET', 'Entity Framework', 'Angular 11', 'Angular Material', 'MySQL', 'Git', 'GitHub', 'NAS Synology']
+    },
+    {
+      title: 'Lavanderia Rosita',
+      description: 'Designed and implemented comprehensive web application solution to digitize manual laundry operations previously managed through spreadsheets and physical records. Developed integrated system encompassing garment registration, inventory management, and financial administration modules, resulting in significant operational efficiency improvements and streamlined business processes.',
+      figure: 'assets/imgs/garou.webp',
+      tecnologies: ['C#', 'ASP .NET', 'Entity Framework', 'Angular 11', 'Angular Material', 'MySQL', 'Git', 'GitHub', 'NAS Synology']
+    },
+    {
+      title: 'Lavanderia Rosita',
+      description: 'Designed and implemented comprehensive web application solution to digitize manual laundry operations previously managed through spreadsheets and physical records. Developed integrated system encompassing garment registration, inventory management, and financial administration modules, resulting in significant operational efficiency improvements and streamlined business processes.',
+      figure: 'assets/imgs/garou.webp',
+      tecnologies: ['C#', 'ASP .NET', 'Entity Framework', 'Angular 11', 'Angular Material', 'MySQL', 'Git', 'GitHub', 'NAS Synology']
+    },
+    {
+      title: 'Lavanderia Rosita',
+      description: 'Designed and implemented comprehensive web application solution to digitize manual laundry operations previously managed through spreadsheets and physical records. Developed integrated system encompassing garment registration, inventory management, and financial administration modules, resulting in significant operational efficiency improvements and streamlined business processes.',
+      figure: 'assets/imgs/garou.webp',
+      tecnologies: ['C#', 'ASP .NET', 'Entity Framework', 'Angular 11', 'Angular Material', 'MySQL', 'Git', 'GitHub', 'NAS Synology']
+    },
+    {
+      title: 'Lavanderia Rosita',
+      description: 'Designed and implemented comprehensive web application solution to digitize manual laundry operations previously managed through spreadsheets and physical records. Developed integrated system encompassing garment registration, inventory management, and financial administration modules, resulting in significant operational efficiency improvements and streamlined business processes.',
+      figure: 'assets/imgs/garou.webp',
+      tecnologies: ['C#', 'ASP .NET', 'Entity Framework', 'Angular 11', 'Angular Material', 'MySQL', 'Git', 'GitHub', 'NAS Synology']
+    },
+    {
+      title: 'Lavanderia Rosita',
+      description: 'Designed and implemented comprehensive web application solution to digitize manual laundry operations previously managed through spreadsheets and physical records. Developed integrated system encompassing garment registration, inventory management, and financial administration modules, resulting in significant operational efficiency improvements and streamlined business processes.',
+      figure: 'assets/imgs/garou.webp',
+      tecnologies: ['C#', 'ASP .NET', 'Entity Framework', 'Angular 11', 'Angular Material', 'MySQL', 'Git', 'GitHub', 'NAS Synology']
+    },
+    {
+      title: 'Lavanderia Rosita',
+      description: 'Designed and implemented comprehensive web application solution to digitize manual laundry operations previously managed through spreadsheets and physical records. Developed integrated system encompassing garment registration, inventory management, and financial administration modules, resulting in significant operational efficiency improvements and streamlined business processes.',
+      figure: 'assets/imgs/garou.webp',
+      tecnologies: ['C#', 'ASP .NET', 'Entity Framework', 'Angular 11', 'Angular Material', 'MySQL', 'Git', 'GitHub', 'NAS Synology']
+    },
+    {
+      title: 'Lavanderia Rosita',
+      description: 'Designed and implemented comprehensive web application solution to digitize manual laundry operations previously managed through spreadsheets and physical records. Developed integrated system encompassing garment registration, inventory management, and financial administration modules, resulting in significant operational efficiency improvements and streamlined business processes.',
+      figure: 'assets/imgs/garou.webp',
+      tecnologies: ['C#', 'ASP .NET', 'Entity Framework', 'Angular 11', 'Angular Material', 'MySQL', 'Git', 'GitHub', 'NAS Synology']
+    },
+    {
+      title: 'Lavanderia Rosita',
+      description: 'Designed and implemented comprehensive web application solution to digitize manual laundry operations previously managed through spreadsheets and physical records. Developed integrated system encompassing garment registration, inventory management, and financial administration modules, resulting in significant operational efficiency improvements and streamlined business processes.',
+      figure: 'assets/imgs/garou.webp',
+      tecnologies: ['C#', 'ASP .NET', 'Entity Framework', 'Angular 11', 'Angular Material', 'MySQL', 'Git', 'GitHub', 'NAS Synology']
+    },
+    {
+      title: 'Lavanderia Rosita',
+      description: 'Designed and implemented comprehensive web application solution to digitize manual laundry operations previously managed through spreadsheets and physical records. Developed integrated system encompassing garment registration, inventory management, and financial administration modules, resulting in significant operational efficiency improvements and streamlined business processes.',
+      figure: 'assets/imgs/garou.webp',
+      tecnologies: ['C#', 'ASP .NET', 'Entity Framework', 'Angular 11', 'Angular Material', 'MySQL', 'Git', 'GitHub', 'NAS Synology']
+    },
+    {
+      title: 'Lavanderia Rosita',
+      description: 'Designed and implemented comprehensive web application solution to digitize manual laundry operations previously managed through spreadsheets and physical records. Developed integrated system encompassing garment registration, inventory management, and financial administration modules, resulting in significant operational efficiency improvements and streamlined business processes.',
+      figure: 'assets/imgs/garou.webp',
+      tecnologies: ['C#', 'ASP .NET', 'Entity Framework', 'Angular 11', 'Angular Material', 'MySQL', 'Git', 'GitHub', 'NAS Synology']
+    },
+    {
+      title: 'Lavanderia Rosita',
+      description: 'Designed and implemented comprehensive web application solution to digitize manual laundry operations previously managed through spreadsheets and physical records. Developed integrated system encompassing garment registration, inventory management, and financial administration modules, resulting in significant operational efficiency improvements and streamlined business processes.',
+      figure: 'assets/imgs/garou.webp',
+      tecnologies: ['C#', 'ASP .NET', 'Entity Framework', 'Angular 11', 'Angular Material', 'MySQL', 'Git', 'GitHub', 'NAS Synology']
+    },
+    {
+      title: 'Lavanderia Rosita',
+      description: 'Designed and implemented comprehensive web application solution to digitize manual laundry operations previously managed through spreadsheets and physical records. Developed integrated system encompassing garment registration, inventory management, and financial administration modules, resulting in significant operational efficiency improvements and streamlined business processes.',
+      figure: 'assets/imgs/garou.webp',
+      tecnologies: ['C#', 'ASP .NET', 'Entity Framework', 'Angular 11', 'Angular Material', 'MySQL', 'Git', 'GitHub', 'NAS Synology']
+    },
+    {
+      title: 'Lavanderia Rosita',
+      description: 'Designed and implemented comprehensive web application solution to digitize manual laundry operations previously managed through spreadsheets and physical records. Developed integrated system encompassing garment registration, inventory management, and financial administration modules, resulting in significant operational efficiency improvements and streamlined business processes.',
+      figure: 'assets/imgs/garou.webp',
+      tecnologies: ['C#', 'ASP .NET', 'Entity Framework', 'Angular 11', 'Angular Material', 'MySQL', 'Git', 'GitHub', 'NAS Synology']
+    },
+    {
+      title: 'Lavanderia Rosita',
+      description: 'Designed and implemented comprehensive web application solution to digitize manual laundry operations previously managed through spreadsheets and physical records. Developed integrated system encompassing garment registration, inventory management, and financial administration modules, resulting in significant operational efficiency improvements and streamlined business processes.',
+      figure: 'assets/imgs/garou.webp',
+      tecnologies: ['C#', 'ASP .NET', 'Entity Framework', 'Angular 11', 'Angular Material', 'MySQL', 'Git', 'GitHub', 'NAS Synology']
+    },
+    {
+      title: 'Lavanderia Rosita',
+      description: 'Designed and implemented comprehensive web application solution to digitize manual laundry operations previously managed through spreadsheets and physical records. Developed integrated system encompassing garment registration, inventory management, and financial administration modules, resulting in significant operational efficiency improvements and streamlined business processes.',
+      figure: 'assets/imgs/garou.webp',
+      tecnologies: ['C#', 'ASP .NET', 'Entity Framework', 'Angular 11', 'Angular Material', 'MySQL', 'Git', 'GitHub', 'NAS Synology']
     }
-  ]
+  ];
 
   ngOnInit(): void {
+
   }
 
   onSwiper([swiper]: any): void {
