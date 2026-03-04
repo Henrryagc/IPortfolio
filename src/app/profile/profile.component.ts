@@ -18,6 +18,7 @@ export class ProfileComponent implements OnInit {
     informationItems = Profile.getInformationItems();
 
     activeIndex = signal(0);
+    isTransitioning = signal(true);
     private timer: any;
 
     ngOnInit(): void {
@@ -32,7 +33,17 @@ export class ProfileComponent implements OnInit {
         // Prevent starting multiple intervals
         this.stopTimer();
         this.timer = setInterval(() => {
+            this.isTransitioning.set(true);
             this.activeIndex.update(index => index + 1);
+
+            // If we've slid to the first cloned element, snap back silently after transition
+            if (this.activeIndex() === this.informationItems.length) {
+                setTimeout(() => {
+                    this.isTransitioning.set(false);
+                    this.activeIndex.set(0);
+                }, 500); // Wait for the 0.5s CSS transition to finish
+            }
+
         }, 3000);
     }
 
@@ -44,9 +55,7 @@ export class ProfileComponent implements OnInit {
     }
 
     goTo(index: number) {
-        // If clicking a dot, calculate the closest forward offset that matches the selected dot
-        const currentGroup = this.activeIndex() % this.informationItems.length;
-        const diff = index - currentGroup;
-        this.activeIndex.update(val => val + diff);
+        this.isTransitioning.set(true);
+        this.activeIndex.set(index);
     }
 }
