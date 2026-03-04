@@ -10,8 +10,10 @@
     </div>
     <div class="profile-card__social">
       @for (item of socialMediaItems; track $index) {
-        <a [href]="item.url" class="profile-card__social-link">
-          <img [src]="item.icon" alt="" class="profile-card__social-icon">
+        <a [href]="item.url" class="profile-card__social-link" target="_blank" rel="noopener noreferrer">
+          <div class="profile-card__social-icon" [style.-webkit-mask-image]="'url(' + item.icon + ')'"
+            [style.mask-image]="'url(' + item.icon + ')'" [attr.aria-label]="'Link to ' + item.url">
+          </div>
         </a>
       }
     </div>
@@ -26,7 +28,10 @@
         @for (categoryGroup of informationItems; track $index) {
           <div class="profile-card__category-slide">
             <div class="profile-card__category-header">
-              <h4 class="profile-card__category-title">{{ categoryGroup.category }}</h4>
+              <h4 class="profile-card__category-title"
+                [class.profile-card__category-title--active]="$index === activeIndex()">
+                {{ categoryGroup.category }}
+              </h4>
               @if ($index === activeIndex()) {
                 <div class="profile-card__progress-bar">
                   <div class="profile-card__progress-fill"></div>

@@ -74,8 +74,8 @@
       transform: scale(1.1) translateY(-2px);
       background-color: var(--color-accent);
 
-      img {
-        filter: brightness(0) invert(1);
+      .profile-card__social-icon {
+        background-color: var(--text-main);
       }
     }
   }
@@ -83,7 +83,15 @@
   &__social-icon {
     height: 1.5rem;
     width: 1.5rem;
-    transition: filter 0.3s ease;
+    background-color: var(--color-accent);
+    display: inline-block;
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    transition: background-color 0.3s ease;
   }
 
   &__divider {
@@ -125,10 +133,16 @@
   &__category-title {
     margin: 0;
     font-size: 0.95rem;
-    color: var(--text-main);
+    color: var(--text-muted, #888);
+    /* Default to a slightly muted color for inactive ones if desired, or keep text-main */
     text-transform: uppercase;
     letter-spacing: 0.05em;
     font-weight: 600;
+    transition: color 0.3s ease;
+
+    &--active {
+      color: var(--color-accent);
+    }
   }
 
   &__progress-bar {
