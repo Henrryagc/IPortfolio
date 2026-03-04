@@ -32,7 +32,7 @@ export class ProfileComponent implements OnInit {
         // Prevent starting multiple intervals
         this.stopTimer();
         this.timer = setInterval(() => {
-            this.activeIndex.update(index => (index + 1) % this.informationItems.length);
+            this.activeIndex.update(index => index + 1);
         }, 3000);
     }
 
@@ -44,6 +44,9 @@ export class ProfileComponent implements OnInit {
     }
 
     goTo(index: number) {
-        this.activeIndex.set(index);
+        // If clicking a dot, calculate the closest forward offset that matches the selected dot
+        const currentGroup = this.activeIndex() % this.informationItems.length;
+        const diff = index - currentGroup;
+        this.activeIndex.update(val => val + diff);
     }
 }

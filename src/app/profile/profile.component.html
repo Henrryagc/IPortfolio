@@ -25,38 +25,41 @@
     <div class="profile-card__slider-viewport" (mouseenter)="stopTimer()" (mouseleave)="startTimer()">
       <div class="profile-card__slider-track-main" [style.transform]="'translateX(-' + (activeIndex() * 100) + '%)'">
 
-        @for (categoryGroup of informationItems; track $index) {
-          <div class="profile-card__category-slide">
-            <div class="profile-card__category-header">
-              <h4 class="profile-card__category-title"
-                [class.profile-card__category-title--active]="$index === activeIndex()">
-                {{ categoryGroup.category }}
-              </h4>
-              @if ($index === activeIndex()) {
-                <div class="profile-card__progress-bar">
-                  <div class="profile-card__progress-fill"></div>
-                </div>
-              }
-            </div>
-            <div class="profile-card__category-items">
-              @for (item of categoryGroup.items; track $index) {
-                <app-tooltip [text]="item.title" position="bottom">
-                  <div class="profile-card__info-item">
-                    <div class="profile-card__info-icon" [style.-webkit-mask-image]="'url(' + item.icon + ')'"
-                      [style.mask-image]="'url(' + item.icon + ')'" [attr.aria-label]="item.title">
-                    </div>
+        @for (loopIndex of [0, 1, 2, 3, 4, 5, 6, 7]; track $index) {
+          @for (categoryGroup of informationItems; track categoryIndex; let categoryIndex = $index) {
+            <div class="profile-card__category-slide">
+              <div class="profile-card__category-header">
+                <h4 class="profile-card__category-title"
+                  [class.profile-card__category-title--active]="categoryIndex === (activeIndex() % informationItems.length)">
+                  {{ categoryGroup.category }}
+                </h4>
+                @if (categoryIndex === (activeIndex() % informationItems.length)) {
+                  <div class="profile-card__progress-bar">
+                    <div class="profile-card__progress-fill"></div>
                   </div>
-                </app-tooltip>
-              }
+                }
+              </div>
+              <div class="profile-card__category-items">
+                @for (item of categoryGroup.items; track $index) {
+                  <app-tooltip [text]="item.title" position="bottom">
+                    <div class="profile-card__info-item">
+                      <div class="profile-card__info-icon" [style.-webkit-mask-image]="'url(' + item.icon + ')'"
+                        [style.mask-image]="'url(' + item.icon + ')'" [attr.aria-label]="item.title">
+                      </div>
+                    </div>
+                  </app-tooltip>
+                }
+              </div>
             </div>
-          </div>
+          }
         }
       </div>
     </div>
 
     <div class="profile-card__dots">
       @for (categoryGroup of informationItems; track $index) {
-        <button class="profile-card__dot" [class.profile-card__dot--active]="$index === activeIndex()"
+        <button class="profile-card__dot"
+          [class.profile-card__dot--active]="$index === (activeIndex() % informationItems.length)"
           (click)="goTo($index)" [attr.aria-label]="'Go to category ' + categoryGroup.category">
         </button>
       }
