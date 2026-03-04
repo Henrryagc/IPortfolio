@@ -2,7 +2,7 @@
     <ng-content></ng-content>
 
     @if (isVisible && text) {
-        <div class="tooltip-box" [ngClass]="['position-' + position]" animate.enter>
+        <div class="tooltip-box" [ngClass]="['position-' + calculatedPosition]" animate.enter>
             {{ text }}
         </div>
     }
