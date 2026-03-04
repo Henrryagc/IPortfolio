@@ -96,20 +96,45 @@
   &__info {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
     width: 100%;
     margin-top: 0.5rem;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+
+  &__category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  &__category-title {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--text-main);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+  }
+
+  &__category-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
   }
 
   &__info-item {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    justify-content: center;
     background-color: var(--bg-color);
     border: 1px solid var(--border-color);
-    padding: 0.75rem;
     border-radius: 0.5rem;
     transition: transform 0.2s ease, border-color 0.2s ease;
+    cursor: pointer;
 
     &:hover {
       transform: translateY(-2px);
@@ -118,22 +143,25 @@
   }
 
   &__info-icon {
-    height: 2rem;
-    width: 2rem;
-    padding: 0.5rem;
-    background-color: var(--container-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 0.25rem;
-    color: var(--color-accent);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    margin: 0.5rem;
+    /* Replaces the previous padding inside the img */
+    background-color: var(--color-accent);
+    /* Color of the SVG */
+    display: inline-block;
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    transition: background-color 0.3s ease;
   }
 
-  &__info-title {
-    color: var(--text-main);
-    font-weight: 500;
-    font-size: 0.9rem;
+  &__info-item:hover &__info-icon {
+    background-color: var(--text-main);
+    /* Hover effect color change */
   }
 }
 
