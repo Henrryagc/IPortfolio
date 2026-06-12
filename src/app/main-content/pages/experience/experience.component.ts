@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, HostListener } from '@angular/core';
 import { MainContentHeaderComponent } from '../../components/main-content-header/main-content-header.component';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-experience',
@@ -8,7 +8,7 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrls: ['./experience.component.scss'],
   imports: [
     MainContentHeaderComponent,
-    TranslateModule
+    TranslatePipe
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true

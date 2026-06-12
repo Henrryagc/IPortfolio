@@ -5,12 +5,12 @@ import { NavCardDto } from './dto/nav-card.dto';
 import { NavCardModel } from './class/nav-card.model';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-nav',
   imports: [
-    CommonModule, RouterModule, TranslateModule
+    CommonModule, RouterModule, TranslatePipe
   ],
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.scss',

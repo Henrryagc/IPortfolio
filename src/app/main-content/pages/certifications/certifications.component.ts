@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { MainContentHeaderComponent } from '../../components/main-content-header/main-content-header.component';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-certifications',
@@ -8,7 +8,7 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrls: ['./certifications.component.scss'],
   imports: [
     MainContentHeaderComponent,
-    TranslateModule
+    TranslatePipe
   ],
   changeDetection: ChangeDetectionStrategy.Eager,
   standalone: true

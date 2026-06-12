@@ -2,7 +2,7 @@ import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy } from '@
 import { Pagination, Navigation } from "swiper/modules";
 import SwiperCore from 'swiper';
 import { SwiperOptions } from 'swiper/types';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
 import { MainContentHeaderComponent } from '../../components/main-content-header/main-content-header.component';
 
@@ -13,7 +13,7 @@ SwiperCore.use([Pagination, Navigation]);
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  imports: [MainContentHeaderComponent, TranslateModule],
+  imports: [MainContentHeaderComponent, TranslatePipe],
   changeDetection: ChangeDetectionStrategy.Eager,
   standalone: true
 })
