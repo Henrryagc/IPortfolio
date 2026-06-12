@@ -39,19 +39,12 @@
     font-weight: 700;
   }
 
-  &__title-wrapper {
-    padding: 0.3rem 0.8rem;
-    background: rgba(6, 182, 212, 0.1);
-    border: 1px solid rgba(6, 182, 212, 0.3);
-    border-radius: 1rem;
-  }
-
   &__title {
     margin: 0;
     color: var(--color-accent);
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 600;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.03em;
   }
 
   &__social {
@@ -230,13 +223,28 @@
     background-color: var(--bg-color);
     border: 1px solid var(--border-color);
     border-radius: 0.5rem;
-    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease, border-color 0.2s ease, box-shadow 0.2s ease;
     cursor: pointer;
 
+    // Start state for entry animation and end state for exit transition
+    opacity: 0;
+    transform: translateY(12px);
+
     &:hover {
-      transform: translateY(-2px);
-      border-color: var(--color-accent);
+      transform: translateY(-2px) !important;
+      border-color: rgba(255, 255, 255, 0.16);
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &__category-slide--active &__info-item {
+    animation: fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 

@@ -5,9 +5,7 @@
 
   <header class="profile-card__header">
     <h2 class="profile-card__name">Henrry Gutierrez</h2>
-    <div class="profile-card__title-wrapper">
-      <h3 class="profile-card__title">{{ 'PROFILE.TITLE' | translate }}</h3>
-    </div>
+    <h3 class="profile-card__title">{{ 'PROFILE.TITLE' | translate }}</h3>
     <div class="profile-card__social">
       @for (item of socialMediaItems; track $index) {
         <a [href]="item.url" class="profile-card__social-link" target="_blank" rel="noopener noreferrer">
@@ -28,7 +26,7 @@
 
         <!-- Original Items -->
         @for (categoryGroup of informationItems; track categoryIndex; let categoryIndex = $index) {
-          <div class="profile-card__category-slide">
+          <div class="profile-card__category-slide" [class.profile-card__category-slide--active]="categoryIndex === (activeIndex() % informationItems.length)">
             <div class="profile-card__category-header">
               <h4 class="profile-card__category-title"
                 [class.profile-card__category-title--active]="categoryIndex === (activeIndex() % informationItems.length)">
@@ -43,7 +41,7 @@
             <div class="profile-card__category-items">
               @for (item of categoryGroup.items; track $index) {
                 <app-tooltip [text]="item.title" position="bottom">
-                  <div class="profile-card__info-item">
+                  <div class="profile-card__info-item" [style.animation-delay]="$index * 0.08 + 's'">
                     <div class="profile-card__info-icon" [style.-webkit-mask-image]="'url(' + item.icon + ')'"
                       [style.mask-image]="'url(' + item.icon + ')'" [attr.aria-label]="item.title">
                     </div>
@@ -56,7 +54,7 @@
 
         <!-- 1 Set of Cloned Items -->
         @for (categoryGroup of informationItems; track 'clone-' + categoryIndex; let categoryIndex = $index) {
-          <div class="profile-card__category-slide" aria-hidden="true">
+          <div class="profile-card__category-slide" aria-hidden="true" [class.profile-card__category-slide--active]="categoryIndex === (activeIndex() % informationItems.length)">
             <div class="profile-card__category-header">
               <h4 class="profile-card__category-title"
                 [class.profile-card__category-title--active]="categoryIndex === (activeIndex() % informationItems.length)">
@@ -71,7 +69,7 @@
             <div class="profile-card__category-items">
               @for (item of categoryGroup.items; track $index) {
                 <app-tooltip [text]="item.title" position="bottom">
-                  <div class="profile-card__info-item">
+                  <div class="profile-card__info-item" [style.animation-delay]="$index * 0.08 + 's'">
                     <div class="profile-card__info-icon" [style.-webkit-mask-image]="'url(' + item.icon + ')'"
                       [style.mask-image]="'url(' + item.icon + ')'" [attr.aria-label]="item.title">
                     </div>

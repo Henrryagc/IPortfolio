@@ -19,20 +19,23 @@ export class ProfileComponent implements OnInit {
 
     activeIndex = signal(0);
     isTransitioning = signal(true);
-    private timer: any;
+    private startTime = 0;
+    private remainingTime = 3000;
+    private timeoutId: any;
 
     ngOnInit(): void {
-        this.startTimer();
+        this.startNextSlideTimer(3000);
     }
 
     ngOnDestroy(): void {
         this.stopTimer();
     }
 
-    startTimer() {
-        // Prevent starting multiple intervals
+    startNextSlideTimer(delay = 3000) {
         this.stopTimer();
-        this.timer = setInterval(() => {
+        this.startTime = Date.now();
+        this.remainingTime = delay;
+        this.timeoutId = setTimeout(() => {
             this.isTransitioning.set(true);
             this.activeIndex.update(index => index + 1);
 
@@ -44,18 +47,27 @@ export class ProfileComponent implements OnInit {
                 }, 500); // Wait for the 0.5s CSS transition to finish
             }
 
-        }, 3000);
+            // Start the next slide with full 3s delay
+            this.startNextSlideTimer(3000);
+        }, delay);
+    }
+
+    startTimer() {
+        this.startNextSlideTimer(this.remainingTime);
     }
 
     stopTimer() {
-        if (this.timer) {
-            clearInterval(this.timer);
-            this.timer = null;
+        if (this.timeoutId) {
+            clearTimeout(this.timeoutId);
+            this.timeoutId = null;
+            const elapsed = Date.now() - this.startTime;
+            this.remainingTime = Math.max(0, this.remainingTime - elapsed);
         }
     }
 
     goTo(index: number) {
         this.isTransitioning.set(true);
         this.activeIndex.set(index);
+        this.startNextSlideTimer(3000);
     }
 }
