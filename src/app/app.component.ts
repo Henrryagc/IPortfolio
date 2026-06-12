@@ -1,4 +1,4 @@
-import { Component, Inject, PLATFORM_ID, OnInit } from '@angular/core';
+import { Component, Inject, PLATFORM_ID, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -11,6 +11,7 @@ import { TranslateService } from '@ngx-translate/core';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [HeaderComponent, ProfileComponent, MainContentComponent, NavComponent, FooterComponent],
 })
 export class AppComponent implements OnInit {

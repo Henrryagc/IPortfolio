@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy } from '@angular/core';
 import { Pagination, Navigation } from "swiper/modules";
 import SwiperCore from 'swiper';
 import { SwiperOptions } from 'swiper/types';
@@ -14,6 +14,7 @@ SwiperCore.use([Pagination, Navigation]);
   styleUrls: ['./projects.component.scss'],
   encapsulation: ViewEncapsulation.None,
   imports: [MainContentHeaderComponent, TranslateModule],
+  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: true
 })
 export class ProjectsComponent implements OnInit {

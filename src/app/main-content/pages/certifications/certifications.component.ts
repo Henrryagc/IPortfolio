@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { MainContentHeaderComponent } from '../../components/main-content-header/main-content-header.component';
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -10,6 +10,7 @@ import { TranslateModule } from '@ngx-translate/core';
     MainContentHeaderComponent,
     TranslateModule
   ],
+  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: true
 })
 export class CertificationsComponent {
