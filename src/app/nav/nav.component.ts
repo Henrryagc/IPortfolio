@@ -5,16 +5,17 @@ import { NavCardDto } from './dto/nav-card.dto';
 import { NavCardModel } from './class/nav-card.model';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
-    selector: 'app-nav',
-    imports: [
-        CommonModule, RouterModule
-    ],
-    templateUrl: './nav.component.html',
-    styleUrl: './nav.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: true
+  selector: 'app-nav',
+  imports: [
+    CommonModule, RouterModule, TranslatePipe
+  ],
+  templateUrl: './nav.component.html',
+  styleUrl: './nav.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true
 })
 export class NavComponent implements OnInit {
 

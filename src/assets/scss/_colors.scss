@@ -1,10 +1,6 @@
-$primary: #e4ebf2;
-
-
-$white: #E6E5DE;
-$gray: #C0C0BE;
-$blue: #57BEE6;
-$yellow: #FEAE49;
-$dark: #3D454A;
-
-
+$primary: var(--primary);
+$white: var(--text-main);
+$gray: var(--bg-color);
+$blue: var(--color-accent);
+$yellow: var(--color-warning);
+$dark: var(--container-bg);

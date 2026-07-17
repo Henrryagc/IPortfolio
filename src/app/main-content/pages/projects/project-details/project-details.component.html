@@ -1,0 +1,245 @@
+<div class="projects__detail-view">
+  
+  <!-- Top Back Navigation Header -->
+  <header class="projects__detail-nav">
+    <button class="bento-back-btn" (click)="onBack()">
+      <span class="bento-back-btn__circle">
+        <i class='bx bx-arrow-back'></i>
+      </span>
+      <span class="bento-back-btn__text">{{ 'PROJECTS.LABELS.back_to_projects' | translate }}</span>
+    </button>
+    <div class="projects__detail-breadcrumb">
+      <span class="parent">{{ 'PROJECTS.TITLE' | translate }}</span>
+      <span class="separator">/</span>
+      <span class="current">{{ 'PROJECTS.ITEMS.' + project.id + '.title' | translate }}</span>
+    </div>
+  </header>
+
+  <!-- Hero Visual Section (Full-Width Mockup with ambient glow) -->
+  <div class="projects__details-hero projects__details-hero--{{ project.id }}">
+    <div class="mock-browser">
+      <div class="mock-browser__header">
+        <span class="mock-browser__dot mock-browser__dot--red"></span>
+        <span class="mock-browser__dot mock-browser__dot--yellow"></span>
+        <span class="mock-browser__dot mock-browser__dot--green"></span>
+        <div class="mock-browser__address">
+          <i class='bx bx-lock-alt'></i>
+          localhost:4200/{{ project.id }}/demo
+        </div>
+      </div>
+      
+      <div class="mock-browser__viewport">
+        <div class="mock-viewport-content mock-viewport-content--{{ project.id }}">
+          <div class="mock-ui-layout">
+            <!-- Dynamic Mockup Visuals -->
+            @if (project.id === 'kipuview') {
+              <div class="mock-kipuview">
+                <div class="mock-kipuview__sidebar">
+                  <div class="mock-kipuview__side-item active"></div>
+                  <div class="mock-kipuview__side-item"></div>
+                  <div class="mock-kipuview__side-item"></div>
+                </div>
+                <div class="mock-kipuview__workspace">
+                  <div class="mock-kipuview__tabs">
+                    <span class="mock-kipuview__tab active">data.csv</span>
+                    <span class="mock-kipuview__tab">config.json</span>
+                  </div>
+                  <div class="mock-kipuview__grid">
+                    <div class="mock-kipuview__grid-row header">
+                      <span>ID</span><span>Name</span><span>Status</span><span>Progress</span>
+                    </div>
+                    <div class="mock-kipuview__grid-row">
+                      <span>01</span><span>ActiveUser</span><span class="badge success">Active</span><span>[||||||  ]</span>
+                    </div>
+                    <div class="mock-kipuview__grid-row">
+                      <span>02</span><span>ArchivedDoc</span><span class="badge warn">Pending</span><span>[||||    ]</span>
+                    </div>
+                    <div class="mock-kipuview__grid-row">
+                      <span>03</span><span>TempLog_03</span><span class="badge success">Active</span><span>[||||||||]</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            } @else if (project.id === 'gelatopos') {
+              <div class="mock-gelatopos">
+                <div class="mock-gelatopos__header">
+                  <span class="mock-gelatopos__logo">GelatoPOS</span>
+                  <span class="mock-gelatopos__user">Henry G. (Admin)</span>
+                </div>
+                <div class="mock-gelatopos__dashboard">
+                  <div class="mock-card mini">
+                    <span>Today Sales</span>
+                    <h3>$1,248.50</h3>
+                  </div>
+                  <div class="mock-card mini">
+                    <span>Containers Depleted</span>
+                    <h3>142 units</h3>
+                  </div>
+                  <div class="mock-card main">
+                    <span>Flavor Rotation Stock</span>
+                    <div class="mock-chart-bars">
+                      <div class="bar" style="height: 80%"><span class="label">Vanilla</span></div>
+                      <div class="bar" style="height: 60%"><span class="label">Choc</span></div>
+                      <div class="bar" style="height: 45%"><span class="label">Berry</span></div>
+                      <div class="bar" style="height: 90%"><span class="label">Mango</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            } @else if (project.id === 'applaundry') {
+              <div class="mock-applaundry">
+                <div class="mock-applaundry__sidebar">
+                  <div class="mock-applaundry__menu-item"></div>
+                  <div class="mock-applaundry__menu-item"></div>
+                </div>
+                <div class="mock-applaundry__content">
+                  <div class="mock-laundry-header">
+                    <h4>Lavanderia Rosita DB Failover Status</h4>
+                    <span class="failover-badge success">Active-Active (VPS <-> NAS)</span>
+                  </div>
+                  <div class="mock-failover-flow">
+                    <div class="flow-node cloud">
+                      <i class='bx bx-cloud'></i>
+                      <span>Cloud VPS</span>
+                      <small class="pulse">ON</small>
+                    </div>
+                    <div class="flow-sync"><i class='bx bx-transfer-alt'></i> Sync</div>
+                    <div class="flow-node local">
+                      <i class='bx bx-server'></i>
+                      <span>Synology NAS</span>
+                      <small class="pulse">ON</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            } @else if (project.id === 'bytesw') {
+              <div class="mock-bytesw">
+                <div class="mock-bytesw__topbar">
+                  <span>BYTE BANKING CONSOLE</span>
+                  <div class="badge security"><i class='bx bx-check-shield'></i> Keycloak Auth</div>
+                </div>
+                <div class="mock-bytesw__body">
+                  <div class="mock-bytesw__network">
+                    <div class="service-node">Auth API <small class="status">OK</small></div>
+                    <div class="service-node">Tx Ledger <small class="status">OK</small></div>
+                    <div class="service-node">Gateway <small class="status">OK</small></div>
+                  </div>
+                  <div class="mock-bytesw__terminal">
+                    <p>$ kubectl get pods -n finance</p>
+                    <p class="output">lending-service-7f4d8  Running  100%</p>
+                    <p class="output">deposit-service-6b19a  Running  100%</p>
+                  </div>
+                </div>
+              </div>
+            }
+          </div>
+        </div>
+      </div>
+      
+      <div class="mock-browser__footer">
+        <span class="mock-browser__caption">
+          <i class='bx bx-info-circle'></i>
+          {{ 'PROJECTS.ITEMS.' + project.id + '.subtitle' | translate }} - Web Interface Mockup
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Editorial Columns Content Layout -->
+  <div class="projects__details-columns">
+    
+    <!-- Primary Content Column (Left, 65%) -->
+    <main class="projects__details-main">
+      
+      <!-- Project Metadata Header Card -->
+      <section class="details-section details-section--header">
+        <span class="details-meta-category">{{ 'PROJECTS.CATEGORIES.' + project.category | translate }}</span>
+        <h2 class="details-meta-title">{{ 'PROJECTS.ITEMS.' + project.id + '.title' | translate }}</h2>
+        <p class="details-meta-subtitle">{{ 'PROJECTS.ITEMS.' + project.id + '.subtitle' | translate }}</p>
+        
+        <div class="details-meta-actions">
+          @if (project.github) {
+            <a [href]="project.github" target="_blank" class="details-action-btn details-action-btn--github">
+              <img src="assets/icons/iconfinder_github_icon.svg" alt="GitHub">
+              <span>{{ 'PROJECTS.LABELS.github_repo' | translate }}</span>
+            </a>
+          }
+          @if (project.demo && project.demo !== '#') {
+            <a [href]="project.demo" target="_blank" class="details-action-btn details-action-btn--demo">
+              <span>{{ 'PROJECTS.LABELS.live_demo' | translate }}</span> <span class="arrow">&#8599;</span>
+            </a>
+          }
+        </div>
+      </section>
+
+      <!-- Detailed Description Overview -->
+      <section class="details-section">
+        <h3 class="details-section-heading">
+          <i class='bx bx-detail'></i> Overview
+        </h3>
+        <p class="details-section-text">
+          {{ 'PROJECTS.ITEMS.' + project.id + '.longDescription' | translate }}
+        </p>
+      </section>
+
+      <!-- Key Features Checklist -->
+      <section class="details-section">
+        <h3 class="details-section-heading">
+          <i class='bx bx-list-check'></i> {{ 'PROJECTS.LABELS.key_features' | translate }}
+        </h3>
+        <ul class="details-features-list">
+          <li>
+            <i class='bx bx-check-circle'></i>
+            <span>{{ 'PROJECTS.ITEMS.' + project.id + '.feature_0' | translate }}</span>
+          </li>
+          <li>
+            <i class='bx bx-check-circle'></i>
+            <span>{{ 'PROJECTS.ITEMS.' + project.id + '.feature_1' | translate }}</span>
+          </li>
+          <li>
+            <i class='bx bx-check-circle'></i>
+            <span>{{ 'PROJECTS.ITEMS.' + project.id + '.feature_2' | translate }}</span>
+          </li>
+          <li>
+            <i class='bx bx-check-circle'></i>
+            <span>{{ 'PROJECTS.ITEMS.' + project.id + '.feature_3' | translate }}</span>
+          </li>
+        </ul>
+      </section>
+
+    </main>
+
+    <!-- Sidebar Content Column (Right, 35%) -->
+    <aside class="projects__details-sidebar">
+      
+      <!-- Tech Stack Badges Card -->
+      <section class="details-sidebar-card details-sidebar-card--stack">
+        <h4 class="details-sidebar-heading">
+          <i class='bx bx-layer'></i> {{ 'PROJECTS.LABELS.tech_stack' | translate }}
+        </h4>
+        <div class="details-stack-tags">
+          @for (tag of project.tecnologies; track tag) {
+            <span class="details-stack-tag">
+              @if (getTechIcon(tag)) {
+                <i [class]="getTechIcon(tag)"></i>
+              }
+              {{ tag }}
+            </span>
+          }
+        </div>
+      </section>
+
+      <!-- Engineering highlights description -->
+      <section class="details-sidebar-card details-sidebar-card--engineering">
+        <h4 class="details-sidebar-heading">
+          <i class='bx bx-code-curly'></i> {{ 'PROJECTS.LABELS.engineering_highlights' | translate }}
+        </h4>
+        <p class="details-sidebar-text">
+          {{ 'PROJECTS.ITEMS.' + project.id + '.engineering' | translate }}
+        </p>
+      </section>
+
+    </aside>
+
+  </div>
+</div>

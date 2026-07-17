@@ -1,16 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { MainContentHeaderComponent } from '../../components/main-content-header/main-content-header.component';
-import { CommonModule } from '@angular/common';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
-    selector: 'app-certifications',
-    templateUrl: './certifications.component.html',
-    styleUrls: ['./certifications.component.scss'],
-    imports: [
-      MainContentHeaderComponent,
-      CommonModule
-    ],
-    standalone: true
+  selector: 'app-certifications',
+  templateUrl: './certifications.component.html',
+  styleUrls: ['./certifications.component.scss'],
+  imports: [
+    MainContentHeaderComponent,
+    TranslatePipe
+  ],
+  changeDetection: ChangeDetectionStrategy.Eager,
+  standalone: true
 })
 export class CertificationsComponent {
 

@@ -1,22 +1,52 @@
 @use 'src/assets/scss/colors';
 
+:root {
+    // Dark mode (default)
+    --bg-color: #0E0E10;
+    --container-bg: #18181C;
+    --text-main: #FAFAFA;
+    --text-muted: #A1A1AA;
+    --primary: #0E0E10;
+    --color-accent: #D4C4B7; // Frosted Champagne Gold / Warm Sand
+    --color-warning: #FEAE49;
+    --border-color: rgba(255, 255, 255, 0.08);
+
+    color-scheme: dark;
+}
+
+[data-theme="light"] {
+    --bg-color: #F8FAFC;
+    --container-bg: #FFFFFF;
+    --text-main: #0F172A;
+    --text-muted: #475569;
+    --primary: #F1F5F9;
+    --color-accent: #3b82f6; // Blue accent
+    --color-warning: #f59e0b;
+    --border-color: rgba(0, 0, 0, 0.05);
+
+    color-scheme: light;
+}
 
 @font-face {
     font-family: victor;
     src: url(assets/fonts/Victor_Mono/VictorMono-VariableFont_wght.ttf);
 }
 
-html, body { padding: 0; margin: 0; }
-
-* {
-    font-family: victor, 'Lucida Sans';
+html,
+body {
+    padding: 0;
+    margin: 0;
 }
 
+* {
+    font-family: victor, 'Lucida Sans', sans-serif;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
 
 body {
-    // height: 100%;
-    background-color: colors.$gray;
-    color: colors.$white;
+    background-color: var(--bg-color);
+    color: var(--text-main);
     overflow-x: hidden;
 }
 

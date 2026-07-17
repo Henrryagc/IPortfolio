@@ -20,8 +20,8 @@
     width: 12rem;
     border-radius: 1rem;
     object-fit: cover;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    border: 0.3rem solid colors.$yellow;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border: 0.3rem solid var(--color-accent);
   }
 
   &__header {
@@ -35,19 +35,16 @@
   &__name {
     margin: 0;
     font-size: 1.75rem;
-  }
-
-  &__title-wrapper {
-    padding: 0.25rem 0.75rem;
-    background: colors.$yellow;
-    border-radius: 0.25rem;
+    color: var(--text-main);
+    font-weight: 700;
   }
 
   &__title {
     margin: 0;
-    color: colors.$dark;
+    color: var(--color-accent);
     font-size: 1rem;
     font-weight: 600;
+    letter-spacing: 0.03em;
   }
 
   &__social {
@@ -57,59 +54,220 @@
   }
 
   &__social-link {
-    background-color: colors.$white;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
     padding: 0.5rem;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 0.2s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 
     &:hover {
-      transform: scale(1.1);
+      transform: scale(1.1) translateY(-2px);
+      background-color: var(--color-accent);
+
+      .profile-card__social-icon {
+        background-color: var(--text-main);
+      }
     }
   }
 
   &__social-icon {
     height: 1.5rem;
     width: 1.5rem;
+    background-color: var(--color-accent);
+    display: inline-block;
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    transition: background-color 0.3s ease;
   }
 
   &__divider {
     width: 100%;
     border: none;
-    border-top: 1px solid colors.$gray;
-    margin: 0.5rem 0;
+    border-top: 1px solid var(--border-color);
+    margin: 1rem 0;
   }
 
   &__info {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
     width: 100%;
+    margin-top: 0.5rem;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+
+  &__category-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 0 1rem;
+  }
+
+  &__category-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    width: 60%;
+    margin-bottom: 0.5rem;
+  }
+
+  &__category-title {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--text-muted, #888);
+    /* Default to a slightly muted color for inactive ones if desired, or keep text-main */
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    transition: color 0.3s ease;
+
+    &--active {
+      color: var(--color-accent);
+    }
+  }
+
+  &__progress-bar {
+    width: 100%;
+    height: 4px;
+    background-color: var(--border-color);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  &__progress-fill {
+    height: 100%;
+    background-color: var(--color-accent);
+    width: 0%;
+    animation: progressLoad 3s linear forwards;
+  }
+
+  /* Note: Pausing the slider also pauses the progress bar if we target play state */
+  &__slider-viewport:hover &__progress-fill {
+    animation-play-state: paused;
+  }
+
+  @keyframes progressLoad {
+    0% {
+      width: 0%;
+    }
+
+    100% {
+      width: 100%;
+    }
+  }
+
+  &__category-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  &__slider-viewport {
+    width: 100%;
+    overflow-x: clip;
+    overflow-y: visible;
+    position: relative;
+    padding: 0.5rem 0;
+  }
+
+  &__slider-track-main {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  &__dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
     margin-top: 1rem;
+  }
+
+  &__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--border-color);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    padding: 0;
+
+    &--active {
+      background-color: var(--color-accent);
+      transform: scale(1.3);
+    }
+
+    &:hover {
+      background-color: var(--color-warning);
+    }
   }
 
   &__info-item {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    background-color: colors.$yellow;
-    padding: 0.75rem;
+    justify-content: center;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
     border-radius: 0.5rem;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+
+    // Start state for entry animation and end state for exit transition
+    opacity: 0;
+    transform: translateY(12px);
+
+    &:hover {
+      transform: translateY(-2px) !important;
+      border-color: rgba(255, 255, 255, 0.16);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &__category-slide--active &__info-item {
+    animation: fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   &__info-icon {
-    height: 2rem;
-    width: 2rem;
-    padding: 0.5rem;
-    background-color: colors.$white;
-    border-radius: 0.25rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    margin: 0.5rem;
+    /* Replaces the previous padding inside the img */
+    background-color: var(--color-accent);
+    /* Color of the SVG */
+    display: inline-block;
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    transition: background-color 0.3s ease;
   }
 
-  &__info-title {
-    color: colors.$dark;
-    font-weight: 500;
+  &__info-item:hover &__info-icon {
+    background-color: var(--text-main);
+    /* Hover effect color change */
   }
 }
 

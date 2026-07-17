@@ -1,36 +1,63 @@
-<app-main-content-header [title]="'Projects'" />
+<app-main-content-header [title]="'PROJECTS.TITLE' | translate" />
 
-<!-- <header class="projects__header">
-  <nav class="projects__nav">
-    <a href="#" class="projects__nav-link projects__nav-link--active">All</a>
-    <a href="#" class="projects__nav-link">Full Stack</a>
-    <a href="#" class="projects__nav-link">Frontend</a>
-    <a href="#" class="projects__nav-link">Backend</a>
-    <a href="#" class="projects__nav-link">Mobile</a>
-  </nav>
-</header> -->
+@if (!selectedProject) {
+  <header class="projects__header">
+    <nav class="projects__nav">
+      @for (cat of categories; track cat) {
+        <button 
+          class="projects__nav-link"
+          [class.projects__nav-link--active]="activeFilter === cat"
+          (click)="setFilter(cat)">
+          {{ 'PROJECTS.CATEGORIES.' + cat | translate }}
+        </button>
+      }
+    </nav>
+  </header>
 
-<section class="projects__list">
-  @for (item of projects; track item.title) {
-  <div class="projects__card">
-    <img [src]="item.figure" alt="{{ item.title }} icon" class="projects__card-image" loading="lazy">
-    <div class="projects__card-overlay">
-      <div>
-        <h2 class="projects__card-title"> {{ item.title }} </h2>
-        <p class="projects__card-description">{{ item.description }}</p>
-      </div>
-      <div class="projects__card-bottom">
-        <div class="projects__card-tags">
-          @for (tag of item.tecnologies; track tag) {
-          <span class="projects__card-tag">{{ tag }}</span>
-          }
+  <section class="projects__list">
+    @for (item of getFilteredProjects(); track item.id; let i = $index) {
+      <div class="projects__card" (click)="openDetail(item)" [style.animation-delay]="(i * 100) + 'ms'">
+        <!-- Image or Visual Fallback -->
+        <div class="projects__card-visual projects__card-visual--{{ item.id }}">
+          <div class="projects__card-visual-overlay"></div>
+          <div class="projects__card-visual-icon">
+            @if (item.id === 'kipuview') {
+              <i class='bx bx-grid-alt'></i>
+            } @else if (item.id === 'gelatopos') {
+              <i class='bx bx-store-alt'></i>
+            } @else if (item.id === 'applaundry') {
+              <i class='bx bx-wind'></i>
+            } @else if (item.id === 'bytesw') {
+              <i class='bx bx-shield-quarter'></i>
+            }
+          </div>
         </div>
-        <footer class="projects__card-footer">
-          <a class="projects__card-link">GitHub <img src="assets/icons/iconfinder_github_icon.svg" alt="GitHub"></a>
-          <a class="projects__card-link">Live Demo <span>&#8599;</span></a>
-        </footer>
+
+        <div class="projects__card-overlay">
+          <div>
+            <span class="projects__card-category">{{ 'PROJECTS.CATEGORIES.' + item.category | translate }}</span>
+            <h2 class="projects__card-title"> {{ 'PROJECTS.ITEMS.' + item.id + '.title' | translate }} </h2>
+            <p class="projects__card-description">{{ 'PROJECTS.ITEMS.' + item.id + '.description' | translate }}</p>
+          </div>
+          <div class="projects__card-bottom">
+            <div class="projects__card-tags">
+              @for (tag of item.tecnologies.slice(0, 4); track tag) {
+                <span class="projects__card-tag">{{ tag }}</span>
+              }
+              @if (item.tecnologies.length > 4) {
+                <span class="projects__card-tag-more">+{{ item.tecnologies.length - 4 }}</span>
+              }
+            </div>
+            <footer class="projects__card-footer">
+              <span class="projects__card-action-btn">
+                {{ 'PROJECTS.LABELS.view_details' | translate }} &rarr;
+              </span>
+            </footer>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  }
-</section>
+    }
+  </section>
+} @else {
+  <app-project-details [project]="selectedProject" (back)="closeDetail()" />
+}

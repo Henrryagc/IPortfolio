@@ -1,0 +1,95 @@
+{
+    "NAV": {
+        "WHOAMI": "Who Am I",
+        "EXPERIENCE": "Experience",
+        "PROJECTS": "Projects",
+        "CERT.": "Certificates"
+    },
+    "THEME": {
+        "LIGHT": "Switch to light mode",
+        "DARK": "Switch to dark mode"
+    },
+    "PROFILE": {
+        "TITLE": "IA + Software Engineer",
+        "PHONE": "+591 63518485",
+        "LOCATION": "La Paz, Bolivia",
+        "EMAIL": "ihenrryagc@example.com"
+    },
+    "EXPERIENCE": {
+        "TITLE": "Experience"
+    },
+    "PROJECTS": {
+        "TITLE": "Projects",
+        "ALL": "All",
+        "FULLSTACK": "Full Stack",
+        "FRONTEND": "Frontend",
+        "BACKEND": "Backend",
+        "MOBILE": "Mobile",
+        "DESKTOP": "Desktop",
+        "CATEGORIES": {
+            "all": "All",
+            "fullstack": "Full Stack",
+            "frontend": "Frontend",
+            "backend": "Backend",
+            "desktop": "Desktop"
+        },
+        "LABELS": {
+            "view_details": "View Details",
+            "key_features": "Key Features",
+            "tech_stack": "Tech Stack",
+            "engineering_highlights": "Engineering Highlights",
+            "github_repo": "GitHub Repository",
+            "live_demo": "Live Demo",
+            "back_to_projects": "Back to Projects"
+        },
+        "ITEMS": {
+            "kipuview": {
+                "title": "KipuView",
+                "subtitle": "Cross-Platform Delimited Text Parser & Grid Editor",
+                "description": "A high-performance delimited text editor built with Tauri v2 and Angular 22, enabling native cross-platform grid operations on large files.",
+                "longDescription": "KipuView is a premium, lightweight text parser, table visualizer, and grid editor running natively on macOS, Windows, and Linux, as well as compiling directly to standard web browsers. It provides lightning-fast tabular rendering for massive files, ensuring real-time inline editing and query navigation.",
+                "feature_0": "Multi-Tab Workspace: Sandboxed tabs that independently preserve delimiters, file paths, and modification states.",
+                "feature_1": "High-Performance Parser: Line-by-line index scanning loops that parse cell payloads without blocking the main UI thread.",
+                "feature_2": "Interactive Grid: Direct cell correction, modification highlighting, and safe Tauri-based disk writes.",
+                "feature_3": "Advanced Find & Replace: Case-sensitivity, whole-word matching, regular expressions, and column scope filters.",
+                "engineering": "Built with unidirectional data flow using Angular Signals for reactive UI state updates. Integrates Tauri system plugins (@tauri-apps/plugin-fs, @tauri-apps/plugin-dialog, and @tauri-apps/plugin-updater) for native file system access and auto-updates, with standard browser fallback controls."
+            },
+            "gelatopos": {
+                "title": "GelatoPOS",
+                "subtitle": "Ice Cream Shop Management & POS System",
+                "description": "A full-stack sales, smart inventory, and financial audit POS system tailored for ice cream shops, built with Flask and Angular 20.",
+                "longDescription": "GelatoPOS is an enterprise-ready sales order and inventory management solution. It automates counter sales and solves a critical tracking problem by linking menu items with physical containers (cones and cups), dynamically reducing inventory in real time.",
+                "feature_0": "POS Order Desk: Responsive, rapid checkout interface with flexible payment options (cash, cards, local e-wallets).",
+                "feature_1": "Smart Inventory Depletion: Real-time container count reductions mapped to products upon checkout.",
+                "feature_2": "Cash Tonnage Calculator: Shift close drawer reconciliation desglosing currency denominations to flag surpluses or deficits.",
+                "feature_3": "Analytics & Reports: Apache ECharts dashboards and jsPDF + html2canvas PDF exports for daily sales registers.",
+                "engineering": "Uses Flask (Python 3) and SQLAlchemy 2.x backend running PyMySQL. Timezone calculations are synchronized to America/Lima via Day.js to prevent shift-crossover date errors. Fully containerized with multi-stage Docker builds served by Nginx and Gunicorn."
+            },
+            "applaundry": {
+                "title": "AppLaundry",
+                "subtitle": "Laundry Management & Automation System",
+                "description": "A robust hybrid VPS/NAS full-stack business system with active-active replica database failover, built with .NET 9 and Angular 20.",
+                "longDescription": "AppLaundry is a full-stack administrative suite designed to digitize and manage the operational lifecycle of a laundry business chain. It features a robust transactional backend paired with complex local infrastructure highlights.",
+                "feature_0": "Garment Tracking: Quick registration, service breakdowns, and multi-state operational progress workflows.",
+                "feature_1": "Ticket Printing: Native local integration with industrial thermal receipt printers via DLL interfaces.",
+                "feature_2": "Database Replication: Bidirectional Active-Active Master-Master MariaDB replication between cloud VPS and Synology NAS.",
+                "feature_3": "Connection Failover: Auto-health monitoring in .NET that switches connection pools to NAS in under 5 seconds if VPS is down.",
+                "engineering": "Secured using Cloudflare Zero Trust Tunnels to safely expose NAS Docker containers without router port-forwarding. Frontend is compiled and optimized using Bun for high-performance builds. Employs ClosedXML in .NET for rich Excel report compilation."
+            },
+            "bytesw": {
+                "title": "BYTESW",
+                "subtitle": "Banking Services & Microservices Infrastructure",
+                "description": "Critical financial microservices infrastructure managing core banking transactions, built with Spring Boot, Micronaut, and Angular.",
+                "longDescription": "BYTESW is a secure, high-availability banking portal executing critical financial transactions. Structured around a microservices pattern, the platform processes heavy payloads, guarantees secure authentication, and serves high concurrency requirements.",
+                "feature_0": "Microservices Core: Robust backend services built with Java Spring Boot and Micronaut.",
+                "feature_1": "IAM Security: Centralized authorization and access token guards powered by Keycloak.",
+                "feature_2": "Deployment Pipeline: CI/CD automation through Jenkins pipelines to AWS EKS clusters.",
+                "feature_3": "Team Leadership: Coordinated multiple sprints and enforced code quality, unit testing, and delivery timelines.",
+                "engineering": "Leverages AWS infrastructure (EC2, EKS, RDS) containerized with Docker and orchestrated with Kubernetes. Handles massive data queries with optimized MySQL/MariaDB indexing and caching layers."
+            }
+        }
+    },
+    "CERTIFICATIONS": {
+        "TITLE": "Certificates"
+    }
+}

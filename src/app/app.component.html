@@ -1,18 +1,27 @@
+<div class="header-tools">
+    <button class="lang-toggle-btn" (click)="switchLanguage()" [attr.aria-label]="'Switch language'">
+        {{ currentLang }}
+    </button>
+    <button class="theme-toggle-btn" (click)="toggleTheme()"
+        [attr.aria-label]="isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'">
+        <i class='bx' [class.bx-sun]="isDarkMode" [class.bx-moon]="!isDarkMode"></i>
+    </button>
+</div>
 
-<app-header/>
+<app-header />
 
 <section>
     <aside class="content">
-        <app-profile/>
+        <app-profile />
     </aside>
 
-    <main class="content">
-        <app-main-content/>
+    <main>
+        <app-main-content />
     </main>
 
-    <nav class="content">
-        <app-nav/>
+    <nav class="content p-0">
+        <app-nav />
     </nav>
 </section>
 
-<app-footer/>
+<app-footer />

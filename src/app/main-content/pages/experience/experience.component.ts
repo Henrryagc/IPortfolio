@@ -1,15 +1,17 @@
 import { ChangeDetectionStrategy, Component, HostListener } from '@angular/core';
 import { MainContentHeaderComponent } from '../../components/main-content-header/main-content-header.component';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
-    selector: 'app-experience',
-    templateUrl: './experience.component.html',
-    styleUrls: ['./experience.component.scss'],
-    imports: [
-      MainContentHeaderComponent
-    ],
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: true
+  selector: 'app-experience',
+  templateUrl: './experience.component.html',
+  styleUrls: ['./experience.component.scss'],
+  imports: [
+    MainContentHeaderComponent,
+    TranslatePipe
+  ],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true
 })
 export class ExperienceComponent {
 
@@ -26,14 +28,35 @@ export class ExperienceComponent {
       title: 'Lavanderia Rosita',
       description: 'Designed and implemented comprehensive web application solution to digitize manual laundry operations previously managed through spreadsheets and physical records. Developed integrated system encompassing garment registration, inventory management, and financial administration modules, resulting in significant operational efficiency improvements and streamlined business processes.',
       icon: 'assets/icons/facebook.png',
-      tecnologies: ['C#', 'ASP .NET','Entity Framework', 'Angular 11', 'Angular Material', 'MySQL', 'Git', 'GitHub', 'NAS Synology']
+      tecnologies: ['C#', 'ASP .NET', 'Entity Framework', 'Angular 11', 'Angular Material', 'MySQL', 'Git', 'GitHub', 'NAS Synology']
+    },
+    {
+      year: '2021',
+      title: 'Lavanderia Rosita',
+      description: 'Designed and implemented comprehensive web application solution to digitize manual laundry operations previously managed through spreadsheets and physical records. Developed integrated system encompassing garment registration, inventory management, and financial administration modules, resulting in significant operational efficiency improvements and streamlined business processes.',
+      icon: 'assets/icons/facebook.png',
+      tecnologies: ['C#', 'ASP .NET', 'Entity Framework', 'Angular 11', 'Angular Material', 'MySQL', 'Git', 'GitHub', 'NAS Synology']
+    },
+    {
+      year: '2020',
+      title: 'Lavanderia Rosita',
+      description: 'Designed and implemented comprehensive web application solution to digitize manual laundry operations previously managed through spreadsheets and physical records. Developed integrated system encompassing garment registration, inventory management, and financial administration modules, resulting in significant operational efficiency improvements and streamlined business processes.',
+      icon: 'assets/icons/facebook.png',
+      tecnologies: ['C#', 'ASP .NET', 'Entity Framework', 'Angular 11', 'Angular Material', 'MySQL', 'Git', 'GitHub', 'NAS Synology']
+    },
+    {
+      year: '2019',
+      title: 'Lavanderia Rosita',
+      description: 'Designed and implemented comprehensive web application solution to digitize manual laundry operations previously managed through spreadsheets and physical records. Developed integrated system encompassing garment registration, inventory management, and financial administration modules, resulting in significant operational efficiency improvements and streamlined business processes.',
+      icon: 'assets/icons/facebook.png',
+      tecnologies: ['C#', 'ASP .NET', 'Entity Framework', 'Angular 11', 'Angular Material', 'MySQL', 'Git', 'GitHub', 'NAS Synology']
     }
   ];
 
 
   @HostListener('document:keypress', ['$event'])
   handleKeyboardEvent(event: KeyboardEvent) {
-    if('n' == event.key || 'N' == event.key) {
+    if ('n' == event.key || 'N' == event.key) {
       console.log(event.key);
     }
     console.log(event);

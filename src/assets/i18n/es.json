@@ -1,0 +1,95 @@
+{
+    "NAV": {
+        "WHOAMI": "Sobre Mí",
+        "EXPERIENCE": "Experiencia",
+        "PROJECTS": "Proyectos",
+        "CERT.": "Certificados"
+    },
+    "THEME": {
+        "LIGHT": "Cambiar a modo claro",
+        "DARK": "Cambiar a modo oscuro"
+    },
+    "PROFILE": {
+        "TITLE": "IA + Ingeniero de Software",
+        "PHONE": "+591 63518485",
+        "LOCATION": "La Paz, Bolivia",
+        "EMAIL": "ihenrryagc@example.com"
+    },
+    "EXPERIENCE": {
+        "TITLE": "Experiencia"
+    },
+    "PROJECTS": {
+        "TITLE": "Proyectos",
+        "ALL": "Todos",
+        "FULLSTACK": "Full Stack",
+        "FRONTEND": "Frontend",
+        "BACKEND": "Backend",
+        "MOBILE": "Móvil",
+        "DESKTOP": "Escritorio",
+        "CATEGORIES": {
+            "all": "Todos",
+            "fullstack": "Full Stack",
+            "frontend": "Frontend",
+            "backend": "Backend",
+            "desktop": "Escritorio"
+        },
+        "LABELS": {
+            "view_details": "Ver Detalles",
+            "key_features": "Características Clave",
+            "tech_stack": "Stack Tecnológico",
+            "engineering_highlights": "Destacados de Ingeniería",
+            "github_repo": "Repositorio GitHub",
+            "live_demo": "Demo en Vivo",
+            "back_to_projects": "Volver a Proyectos"
+        },
+        "ITEMS": {
+            "kipuview": {
+                "title": "KipuView",
+                "subtitle": "Lector y Editor de Grillas de Texto Delimitado Multiplataforma",
+                "description": "Un editor de texto delimitado de alto rendimiento construido con Tauri v2 y Angular 22, que permite operaciones de grilla nativas multiplataforma en archivos grandes.",
+                "longDescription": "KipuView es un visualizador y editor de texto delimitado de alto rendimiento y bajo consumo, que funciona de forma nativa en macOS, Windows y Linux, y se compila sin problemas para navegadores web estándar. Ofrece renderización tabular ultrarrápida para archivos masivos, con edición en línea y navegación de consultas.",
+                "feature_0": "Espacio de Trabajo Multitesta: Pestañas independientes que conservan delimitadores, rutas de archivos y estados de modificación.",
+                "feature_1": "Analizador de Alto Rendimiento: Escaneo línea por línea que procesa el contenido sin bloquear el hilo principal de la interfaz.",
+                "feature_2": "Grilla Interactiva: Corrección de celdas directa, resaltado de modificaciones y guardado seguro en disco mediante Tauri.",
+                "feature_3": "Buscar y Reemplazar Avanzado: Soporte para expresiones regulares, coincidencia de mayúsculas/minúsculas y filtros por columna.",
+                "engineering": "Construido con flujo de datos unidireccional y Angular Signals para reactividad en tiempo real. Integra plugins del sistema de Tauri (@tauri-apps/plugin-fs, @tauri-apps/plugin-dialog y @tauri-apps/plugin-updater) para acceso a archivos y actualizaciones, con alternativas tradicionales en navegadores."
+            },
+            "gelatopos": {
+                "title": "GelatoPOS",
+                "subtitle": "Sistema de Gestión y Punto de Venta (POS) para Heladerías",
+                "description": "Un sistema completo de ventas, control inteligente de inventario y auditoría de caja para heladerías, construido con Flask y Angular 20.",
+                "longDescription": "GelatoPOS es una solución empresarial de punto de venta e inventario. Automatiza las operaciones de venta en mostrador y resuelve el problema de trazabilidad vinculando los productos del menú con sus respectivos envases físicos (conos y vasos) para el descuento automático de stock.",
+                "feature_0": "Módulo de Pedidos POS: Interfaz de cobro rápida e intuitiva con múltiples métodos de pago (efectivo, tarjetas, billeteras electrónicas).",
+                "feature_1": "Deducción Inteligente de Stock: Reducción automática en tiempo real del inventario de envases asociados al producto vendido.",
+                "feature_2": "Arqueo de Caja Detallado: Calculadora de cierre de turno desglosada por denominaciones de billetes y monedas para reportar discrepancias.",
+                "feature_3": "Analítica e Informes: Tableros interactivos con Apache ECharts y exportaciones a PDF utilizando jsPDF + html2canvas.",
+                "engineering": "Utiliza Flask (Python 3) y SQLAlchemy 2.x en el backend con PyMySQL. Los cálculos de fecha se sincronizan con America/Lima a través de Day.js para evitar desfases de zona horaria en los cierres diarios. Desplegado en contenedores Docker y expuesto mediante Nginx y Gunicorn."
+            },
+            "applaundry": {
+                "title": "AppLaundry",
+                "subtitle": "Sistema de Gestión y Automatización de Lavanderías",
+                "description": "Un sistema empresarial robusto de arquitectura híbrida VPS/NAS con replicación de base de datos activa-activa y tolerancia a fallos, construido con .NET 9 y Angular 20.",
+                "longDescription": "AppLaundry es una suite administrativa completa desarrollada para digitalizar y controlar las operaciones diarias de una cadena de lavanderías. Cuenta con una arquitectura transaccional de alta disponibilidad orientada a la consistencia e infraestructura local.",
+                "feature_0": "Seguimiento de Prendas: Registro rápido, desglose de servicios y flujo de estados operativos (recepción, en proceso, listo, entregado).",
+                "feature_1": "Impresión de Tickets: Integración nativa con impresoras térmicas industriales/locales a través de DLLs de fabricante.",
+                "feature_2": "Replicación de BD: Replicación bidireccional Master-Master de MariaDB entre un servidor VPS en la nube y un NAS Synology doméstico.",
+                "feature_3": "Conmutación por Error (Failover): Lógica en .NET que redirige el tráfico al NAS en menos de 5 segundos si el VPS está fuera de línea.",
+                "engineering": "Desplegado en contenedores Docker y expuesto mediante túneles de Cloudflare Zero Trust para mayor seguridad. El frontend está compilado y optimizado con Bun para descargas de compilación rápidas. Genera reportes enriquecidos de Excel usando la librería ClosedXML en C#."
+            },
+            "bytesw": {
+                "title": "BYTESW",
+                "subtitle": "Servicios Bancarios e Infraestructura de Microservicios",
+                "description": "Infraestructura crítica de microservicios financieros para la gestión de transacciones bancarias, construida con Spring Boot, Micronaut y Angular.",
+                "longDescription": "BYTESW es un portal bancario de alta disponibilidad que gestiona transacciones financieras críticas. Estructurado en torno a un patrón de microservicios, el sistema procesa altas cargas concurrentes y garantiza el control de accesos seguro.",
+                "feature_0": "Núcleo de Microservicios: Servicios backend de alta eficiencia construidos con Java Spring Boot y Micronaut.",
+                "feature_1": "Seguridad IAM: Autorización y control de tokens centralizados mediante Keycloak.",
+                "feature_2": "Pipeline de Despliegue: Automatización de CI/CD mediante Jenkins con destino a clusters AWS EKS.",
+                "feature_3": "Liderazgo Técnico: Coordinación de ciclos de desarrollo en sprints, asegurando altos estándares de calidad y entrega.",
+                "engineering": "Corre sobre infraestructura de nube AWS (EC2, EKS, RDS) empaquetada con Docker y orquestada con Kubernetes. Gestiona peticiones masivas mediante indexación y capas de caché optimizadas en MySQL/MariaDB."
+            }
+        }
+    },
+    "CERTIFICATIONS": {
+        "TITLE": "Certificados"
+    }
+}
