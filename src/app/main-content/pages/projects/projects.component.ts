@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy } from '@angular/core';
-import { NgClass } from '@angular/common';
 import { TranslatePipe } from '@ngx-translate/core';
 import { MainContentHeaderComponent } from '../../components/main-content-header/main-content-header.component';
 import { ProjectItem } from './project.model';
@@ -10,7 +9,7 @@ import { ProjectDetailsComponent } from './project-details/project-details.compo
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  imports: [MainContentHeaderComponent, TranslatePipe, NgClass, ProjectDetailsComponent],
+  imports: [MainContentHeaderComponent, TranslatePipe, ProjectDetailsComponent],
   changeDetection: ChangeDetectionStrategy.Default,
   standalone: true
 })
