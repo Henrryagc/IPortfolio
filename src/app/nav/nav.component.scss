@@ -43,10 +43,21 @@
 .nav-card-item.router-link-active {
   background-color: var(--color-accent);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3);
+  box-shadow: 0 4px 12px rgba(212, 196, 183, 0.2);
 
   .nav-card-label,
   .nav-card-icon {
-    color: #ffffff; // white text on active color
+    color: #121212; // Dark text on light champagne background (default dark theme)
+  }
+}
+
+:host-context([data-theme="light"]) {
+  .nav-card-item.router-link-active {
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+
+    .nav-card-label,
+    .nav-card-icon {
+      color: #ffffff; // White text on blue background
+    }
   }
 }
