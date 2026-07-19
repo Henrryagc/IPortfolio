@@ -1,6 +1,6 @@
 <div class="profile-card">
   <figure class="profile-card__figure">
-    <img class="profile-card__image" src="assets/imgs/garou.webp" alt="Profile Picture">
+    <img class="profile-card__image" src="assets/imgs/me.jpeg" alt="Profile Picture">
   </figure>
 
   <header class="profile-card__header">
@@ -24,10 +24,8 @@
     <div class="profile-card__segmented-bar">
       @for (cat of categoryIcons; track $index) {
         <app-tooltip [text]="cat.name" position="bottom">
-          <button class="profile-card__segment-btn"
-            [class.profile-card__segment-btn--active]="$index === activeIndex()"
-            (click)="goTo($index)"
-            [attr.aria-label]="'Select category ' + cat.name">
+          <button class="profile-card__segment-btn" [class.profile-card__segment-btn--active]="$index === activeIndex()"
+            (click)="goTo($index)" [attr.aria-label]="'Select category ' + cat.name">
             <i class="bx" [class]="cat.icon"></i>
           </button>
         </app-tooltip>
@@ -39,7 +37,7 @@
       <h4 class="profile-card__current-category">
         {{ informationItems[activeIndex()].category }}
       </h4>
-      
+
       <div class="profile-card__skills-grid">
         @for (item of informationItems[activeIndex()].items; track $index) {
           <div class="profile-card__tag" [style.animation-delay]="$index * 0.03 + 's'">

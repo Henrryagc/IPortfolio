@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 import { MainContentHeaderComponent } from '../../components/main-content-header/main-content-header.component';
 
 @Component({
@@ -6,7 +7,8 @@ import { MainContentHeaderComponent } from '../../components/main-content-header
     templateUrl: './about-me.component.html',
     styleUrls: ['./about-me.component.scss'],
     imports: [
-      MainContentHeaderComponent
+      MainContentHeaderComponent,
+      TranslatePipe
     ],
     changeDetection: ChangeDetectionStrategy.OnPush,
     standalone: true,

@@ -2,13 +2,11 @@
 
 // Header and Navigation
 .projects__header {
-  padding: 1rem;
-  background-color: rgba(24, 24, 28, 0.4);
+  padding: 0.5rem 1rem;
+  background-color: transparent;
   border: none;
   border-radius: 0.75rem;
   margin-bottom: 2rem;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
 }
 
 .projects__nav {
@@ -46,6 +44,22 @@
 
     [data-theme="light"] & {
       color: #FFFFFF;
+    }
+  }
+}
+
+:host-context([data-theme="light"]) {
+  .projects__header {
+    background-color: transparent;
+  }
+
+  .projects__nav-link {
+    color: #64748B; // Softer slate gray in light mode
+
+    &:hover {
+      color: #0F172A; // Darker slate on hover
+      background-color: rgba(0, 0, 0, 0.03);
+      border-color: rgba(0, 0, 0, 0.05);
     }
   }
 }

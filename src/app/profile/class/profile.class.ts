@@ -8,19 +8,19 @@ export class Profile {
 
     return [
       {
-        'url': '',
+        'url': 'https://github.com/Henrryagc',
         'icon': this.pathProfileIcons + 'github-original-wordmark.svg'
       },
       {
-        'url': '',
+        'url': 'https://www.linkedin.com/in/henrryagc/',
         'icon': this.pathProfileIcons + 'linkedin-plain.svg'
       },
       {
-        'url': '',
+        'url': 'https://api.whatsapp.com/send?phone=+51927970759&text=Hola%20Henrry%2C%20te%20contacto%20a%20trav%C3%A9s%20de%20tu%20portafolio',
         'icon': this.pathProfileIcons + 'phone-rounded-svgrepo-com.svg'
       },
       {
-        'url': '',
+        'url': 'mailto:contact@henrryagc.dev',
         'icon': this.pathProfileIcons + 'google-gmail-svgrepo-com.svg'
       }
     ];
