@@ -149,10 +149,6 @@
       border-color: var(--color-accent) !important;
       color: #121212 !important;
       box-shadow: 0 4px 12px rgba(254, 174, 73, 0.2);
-
-      [data-theme="light"] & {
-        color: #ffffff !important;
-      }
     }
   }
 
@@ -178,20 +174,25 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0.52rem;
+    gap: 0.45rem;
     width: 100%;
     padding: 0.2rem 0;
   }
 
-  &__info-item {
+  &__tag {
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-color: var(--bg-color);
+    gap: 0.35rem;
+    background-color: rgba(255, 255, 255, 0.02);
     border: 1px solid var(--border-color);
-    border-radius: 0.45rem;
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 2rem;
+    padding: 0.28rem 0.6rem;
     cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+
+    [data-theme="light"] & {
+      background-color: rgba(0, 0, 0, 0.02);
+    }
 
     // Start state for entry animation
     opacity: 0;
@@ -199,9 +200,21 @@
     animation: fadeInUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 
     &:hover {
-      transform: translateY(-2px) !important;
-      border-color: rgba(255, 255, 255, 0.16);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-color: var(--color-accent);
+      background-color: rgba(255, 255, 255, 0.04);
+      transform: translateY(-1px);
+
+      [data-theme="light"] & {
+        background-color: rgba(0, 0, 0, 0.03);
+      }
+
+      .profile-card__tag-icon {
+        background-color: var(--text-main);
+      }
+
+      .profile-card__tag-label {
+        color: var(--text-main);
+      }
     }
   }
 
@@ -212,10 +225,9 @@
     }
   }
 
-  &__info-icon {
-    height: 1.95rem;
-    width: 1.95rem;
-    margin: 0.45rem;
+  &__tag-icon {
+    height: 1.05rem;
+    width: 1.05rem;
     background-color: var(--color-accent);
     display: inline-block;
     -webkit-mask-size: contain;
@@ -224,11 +236,22 @@
     mask-size: contain;
     mask-repeat: no-repeat;
     mask-position: center;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.25s ease;
   }
 
-  &__info-item:hover &__info-icon {
-    background-color: var(--text-main);
+  &__tag-label {
+    font-size: 0.74rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    transition: color 0.25s ease;
+    line-height: 1;
+  }
+}
+
+:host-context([data-theme="light"]) {
+  .profile-card__segment-btn--active {
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
   }
 }
 

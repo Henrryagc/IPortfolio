@@ -42,13 +42,12 @@
       
       <div class="profile-card__skills-grid">
         @for (item of informationItems[activeIndex()].items; track $index) {
-          <app-tooltip [text]="item.title" position="bottom">
-            <div class="profile-card__info-item" [style.animation-delay]="$index * 0.03 + 's'">
-              <div class="profile-card__info-icon" [style.-webkit-mask-image]="'url(' + item.icon + ')'"
-                [style.mask-image]="'url(' + item.icon + ')'" [attr.aria-label]="item.title">
-              </div>
+          <div class="profile-card__tag" [style.animation-delay]="$index * 0.03 + 's'">
+            <div class="profile-card__tag-icon" [style.-webkit-mask-image]="'url(' + item.icon + ')'"
+              [style.mask-image]="'url(' + item.icon + ')'" [attr.aria-label]="item.title">
             </div>
-          </app-tooltip>
+            <span class="profile-card__tag-label">{{ item.title }}</span>
+          </div>
         }
       </div>
     </div>
