@@ -63,7 +63,7 @@ export class ProjectsComponent implements OnInit {
     {
       id: 'bytesw',
       category: 'backend',
-      tecnologies: ['Java', 'Spring Boot', 'Micronaut', 'Keycloak', 'MySQL', 'AWS', 'Docker', 'Kubernetes', 'Jenkins'],
+      tecnologies: ['Angular 18', 'Java', 'Spring Boot', 'Micronaut', 'Keycloak', 'MySQL', 'AWS', 'Docker', 'Kubernetes', 'Jenkins'],
       github: 'https://github.com/ihenrryagc/BYTESW',
       demo: 'https://bytesw-banking.web.app',
       images: [
@@ -75,7 +75,7 @@ export class ProjectsComponent implements OnInit {
     }
   ];
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   setFilter(filter: string): void {
     this.activeFilter = filter;

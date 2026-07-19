@@ -17,39 +17,25 @@ export class ExperienceComponent {
 
   events = [
     {
-      year: 'Present',
-      title: 'BYTESW',
-      description: 'Lead development and maintenance of banking applications utilizing microservices architecture. Assumed full project responsibility for microservices implementation after six months, managing requirements analysis, development coordination, and technical delivery. Advanced to team leadership role in second year, successfully coordinating multiple sprint cycles while ensuring adherence to quality standards and delivery timelines for critical financial sector applications.',
+      year: 'EXPERIENCE.ITEMS.bytesw.year',
+      title: 'EXPERIENCE.ITEMS.bytesw.title',
+      description: 'EXPERIENCE.ITEMS.bytesw.description',
       icon: 'assets/icons/linkedin.png',
-      tecnologies: ['Java', 'Python', 'Type Script', 'Angular', 'Spring Boot', 'Micronaut', 'Keycloak', 'MySQL', 'MariaDB', 'AWS', 'Jenkins', 'Docker', 'Kubernetes']
+      tecnologies: ['Java', 'Spring Boot', 'Micronaut', 'Keycloak', 'MySQL', 'MariaDB', 'AWS EKS', 'Jenkins', 'Docker', 'Kubernetes']
     },
     {
-      year: '2021',
-      title: 'Lavanderia Rosita',
-      description: 'Designed and implemented comprehensive web application solution to digitize manual laundry operations previously managed through spreadsheets and physical records. Developed integrated system encompassing garment registration, inventory management, and financial administration modules, resulting in significant operational efficiency improvements and streamlined business processes.',
+      year: 'EXPERIENCE.ITEMS.gelatopos.year',
+      title: 'EXPERIENCE.ITEMS.gelatopos.title',
+      description: 'EXPERIENCE.ITEMS.gelatopos.description',
       icon: 'assets/icons/facebook.png',
-      tecnologies: ['C#', 'ASP .NET', 'Entity Framework', 'Angular 11', 'Angular Material', 'MySQL', 'Git', 'GitHub', 'NAS Synology']
+      tecnologies: ['Python', 'Flask', 'Angular', 'SQLAlchemy', 'MySQL', 'Docker', 'Apache ECharts', 'Day.js']
     },
     {
-      year: '2021',
-      title: 'Lavanderia Rosita',
-      description: 'Designed and implemented comprehensive web application solution to digitize manual laundry operations previously managed through spreadsheets and physical records. Developed integrated system encompassing garment registration, inventory management, and financial administration modules, resulting in significant operational efficiency improvements and streamlined business processes.',
+      year: 'EXPERIENCE.ITEMS.applaundry.year',
+      title: 'EXPERIENCE.ITEMS.applaundry.title',
+      description: 'EXPERIENCE.ITEMS.applaundry.description',
       icon: 'assets/icons/facebook.png',
-      tecnologies: ['C#', 'ASP .NET', 'Entity Framework', 'Angular 11', 'Angular Material', 'MySQL', 'Git', 'GitHub', 'NAS Synology']
-    },
-    {
-      year: '2020',
-      title: 'Lavanderia Rosita',
-      description: 'Designed and implemented comprehensive web application solution to digitize manual laundry operations previously managed through spreadsheets and physical records. Developed integrated system encompassing garment registration, inventory management, and financial administration modules, resulting in significant operational efficiency improvements and streamlined business processes.',
-      icon: 'assets/icons/facebook.png',
-      tecnologies: ['C#', 'ASP .NET', 'Entity Framework', 'Angular 11', 'Angular Material', 'MySQL', 'Git', 'GitHub', 'NAS Synology']
-    },
-    {
-      year: '2019',
-      title: 'Lavanderia Rosita',
-      description: 'Designed and implemented comprehensive web application solution to digitize manual laundry operations previously managed through spreadsheets and physical records. Developed integrated system encompassing garment registration, inventory management, and financial administration modules, resulting in significant operational efficiency improvements and streamlined business processes.',
-      icon: 'assets/icons/facebook.png',
-      tecnologies: ['C#', 'ASP .NET', 'Entity Framework', 'Angular 11', 'Angular Material', 'MySQL', 'Git', 'GitHub', 'NAS Synology']
+      tecnologies: ['C#', 'ASP.NET', 'Entity Framework', 'Angular', 'MariaDB', 'Synology NAS', 'Cloudflare Tunnels', 'ClosedXML']
     }
   ];
 

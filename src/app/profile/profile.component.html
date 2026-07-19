@@ -1,6 +1,6 @@
 <div class="profile-card">
   <figure class="profile-card__figure">
-    <img class="profile-card__image" src="assets/imgs/garou.webp" alt="Profile Picture">
+    <img class="profile-card__image" src="assets/imgs/me.jpeg" alt="Profile Picture">
   </figure>
 
   <header class="profile-card__header">
@@ -20,75 +20,34 @@
   <hr class="profile-card__divider">
 
   <div class="profile-card__info">
-    <div class="profile-card__slider-viewport" (mouseenter)="stopTimer()" (mouseleave)="startTimer()">
-      <div class="profile-card__slider-track-main" [style.transform]="'translateX(-' + (activeIndex() * 100) + '%)'"
-        [style.transition]="isTransitioning() ? 'transform 0.5s ease-in-out' : 'none'">
+    <!-- Iconic Segmented Control Bar -->
+    <div class="profile-card__segmented-bar">
+      @for (cat of categoryIcons; track $index) {
+        <app-tooltip [text]="cat.name" position="bottom">
+          <button class="profile-card__segment-btn" [class.profile-card__segment-btn--active]="$index === activeIndex()"
+            (click)="goTo($index)" [attr.aria-label]="'Select category ' + cat.name">
+            <i class="bx" [class]="cat.icon"></i>
+          </button>
+        </app-tooltip>
+      }
+    </div>
 
-        <!-- Original Items -->
-        @for (categoryGroup of informationItems; track categoryIndex; let categoryIndex = $index) {
-          <div class="profile-card__category-slide" [class.profile-card__category-slide--active]="categoryIndex === (activeIndex() % informationItems.length)">
-            <div class="profile-card__category-header">
-              <h4 class="profile-card__category-title"
-                [class.profile-card__category-title--active]="categoryIndex === (activeIndex() % informationItems.length)">
-                {{ categoryGroup.category }}
-              </h4>
-              @if (categoryIndex === (activeIndex() % informationItems.length)) {
-                <div class="profile-card__progress-bar">
-                  <div class="profile-card__progress-fill"></div>
-                </div>
-              }
-            </div>
-            <div class="profile-card__category-items">
-              @for (item of categoryGroup.items; track $index) {
-                <app-tooltip [text]="item.title" position="bottom">
-                  <div class="profile-card__info-item" [style.animation-delay]="$index * 0.08 + 's'">
-                    <div class="profile-card__info-icon" [style.-webkit-mask-image]="'url(' + item.icon + ')'"
-                      [style.mask-image]="'url(' + item.icon + ')'" [attr.aria-label]="item.title">
-                    </div>
-                  </div>
-                </app-tooltip>
-              }
-            </div>
-          </div>
-        }
+    <!-- Active Category Content -->
+    <div class="profile-card__skills-container">
+      <h4 class="profile-card__current-category">
+        {{ informationItems[activeIndex()].category }}
+      </h4>
 
-        <!-- 1 Set of Cloned Items -->
-        @for (categoryGroup of informationItems; track 'clone-' + categoryIndex; let categoryIndex = $index) {
-          <div class="profile-card__category-slide" aria-hidden="true" [class.profile-card__category-slide--active]="categoryIndex === (activeIndex() % informationItems.length)">
-            <div class="profile-card__category-header">
-              <h4 class="profile-card__category-title"
-                [class.profile-card__category-title--active]="categoryIndex === (activeIndex() % informationItems.length)">
-                {{ categoryGroup.category }}
-              </h4>
-              @if (categoryIndex === (activeIndex() % informationItems.length)) {
-                <div class="profile-card__progress-bar">
-                  <div class="profile-card__progress-fill"></div>
-                </div>
-              }
+      <div class="profile-card__skills-grid">
+        @for (item of informationItems[activeIndex()].items; track $index) {
+          <div class="profile-card__tag" [style.animation-delay]="$index * 0.03 + 's'">
+            <div class="profile-card__tag-icon" [style.-webkit-mask-image]="'url(' + item.icon + ')'"
+              [style.mask-image]="'url(' + item.icon + ')'" [attr.aria-label]="item.title">
             </div>
-            <div class="profile-card__category-items">
-              @for (item of categoryGroup.items; track $index) {
-                <app-tooltip [text]="item.title" position="bottom">
-                  <div class="profile-card__info-item" [style.animation-delay]="$index * 0.08 + 's'">
-                    <div class="profile-card__info-icon" [style.-webkit-mask-image]="'url(' + item.icon + ')'"
-                      [style.mask-image]="'url(' + item.icon + ')'" [attr.aria-label]="item.title">
-                    </div>
-                  </div>
-                </app-tooltip>
-              }
-            </div>
+            <span class="profile-card__tag-label">{{ item.title }}</span>
           </div>
         }
       </div>
-    </div>
-
-    <div class="profile-card__dots">
-      @for (categoryGroup of informationItems; track $index) {
-        <button class="profile-card__dot"
-          [class.profile-card__dot--active]="$index === (activeIndex() % informationItems.length)"
-          (click)="goTo($index)" [attr.aria-label]="'Go to category ' + categoryGroup.category">
-        </button>
-      }
     </div>
   </div>
 </div>

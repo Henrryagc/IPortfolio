@@ -5,6 +5,10 @@
         "PROJECTS": "Proyectos",
         "CERT.": "Certificados"
     },
+    "ABOUT_ME": {
+        "TITLE": "Sobre Mí",
+        "TEXT": "Ingeniero de Software Senior e Integrador de IA con amplia experiencia en aplicaciones web full-stack, herramientas de escritorio nativas (Tauri) e infraestructuras de microservicios bancarios. Trayectoria probada en el diseño de sistemas de alta disponibilidad, replicación de base de datos activa-activa y servicios backend escalables con Java Spring Boot, .NET y Angular. Comprometido con la arquitectura limpia, pipelines de despliegue automatizados y el liderazgo técnico para entregar soluciones empresariales de gran impacto."
+    },
     "THEME": {
         "LIGHT": "Cambiar a modo claro",
         "DARK": "Cambiar a modo oscuro"
@@ -16,7 +20,24 @@
         "EMAIL": "ihenrryagc@example.com"
     },
     "EXPERIENCE": {
-        "TITLE": "Experiencia"
+        "TITLE": "Experiencia",
+        "ITEMS": {
+            "bytesw": {
+                "year": "2024 - Presente",
+                "title": "Ingeniero de Software Líder y Líder Técnico — BYTESW",
+                "description": "Lideré el diseño, desarrollo y orquestación de microservicios de alta disponibilidad para la gestión de transacciones críticas en el sector de banca corporativa. Coordiné sprints, gestioné despliegues a AWS EKS y establecí estándares de calidad de código, pruebas y seguridad."
+            },
+            "gelatopos": {
+                "year": "2023 - 2024",
+                "title": "Ingeniero Full-Stack — GelatoPOS",
+                "description": "Diseñé y desplegué un sistema transaccional de punto de venta (POS) e inventario en tiempo real para tiendas. Automaticé algoritmos de deducción de stock de productos a envases físicos y construí dashboards analíticos interactivos."
+            },
+            "applaundry": {
+                "year": "2021 - 2023",
+                "title": "Arquitecto de Software Full-Stack — AppLaundry / Lavanderia Rosita",
+                "description": "Diseñé una infraestructura híbrida local-nube con replicación activa-activa de base de datos entre un servidor VPS en la nube y un NAS Synology local con conmutación por error automática. Desarrollé la lógica de impresión de tickets y flujos de estados de prendas."
+            }
+        }
     },
     "PROJECTS": {
         "TITLE": "Proyectos",
@@ -91,5 +112,8 @@
     },
     "CERTIFICATIONS": {
         "TITLE": "Certificados"
+    },
+    "FOOTER": {
+        "COPYRIGHT": "© 2025 Henrry Gutierrez - Mi Portafolio"
     }
 }
