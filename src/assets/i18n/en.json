@@ -5,6 +5,10 @@
         "PROJECTS": "Projects",
         "CERT.": "Certificates"
     },
+    "ABOUT_ME": {
+        "TITLE": "About me",
+        "TEXT": "Senior Software Engineer and AI Integrator with extensive expertise in full-stack web applications, native desktop tools (Tauri), and banking microservice architectures. Proven track record in designing high-availability systems, active-active database replication, and scalable backend services with Java Spring Boot, .NET, and Angular. Committed to clean architecture, automated deployment pipelines, and technical leadership to deliver high-impact enterprise solutions."
+    },
     "THEME": {
         "LIGHT": "Switch to light mode",
         "DARK": "Switch to dark mode"
@@ -16,7 +20,24 @@
         "EMAIL": "ihenrryagc@example.com"
     },
     "EXPERIENCE": {
-        "TITLE": "Experience"
+        "TITLE": "Experience",
+        "ITEMS": {
+            "bytesw": {
+                "year": "2024 - Present",
+                "title": "Lead Software Engineer & Technical Leader — BYTESW",
+                "description": "Led the design, development, and orchestration of high-availability microservices for critical transaction management in the corporate banking sector. Coordinated sprints, managed deployments to AWS EKS, and established code quality, testing, and security standards."
+            },
+            "gelatopos": {
+                "year": "2023 - 2024",
+                "title": "Full-Stack Engineer — GelatoPOS",
+                "description": "Designed and deployed a transactional POS and real-time inventory system for retail stores. Automated menu-item-to-container stock deduction algorithms and built interactive sales analytics dashboards."
+            },
+            "applaundry": {
+                "year": "2021 - 2023",
+                "title": "Full-Stack Software Architect — AppLaundry / Lavanderia Rosita",
+                "description": "Architected a hybrid local-cloud infrastructure featuring active-active database replication between cloud VPS and local Synology NAS with automatic failover. Built receipt printing modules and clothing state workflows."
+            }
+        }
     },
     "PROJECTS": {
         "TITLE": "Projects",
@@ -91,5 +112,8 @@
     },
     "CERTIFICATIONS": {
         "TITLE": "Certificates"
+    },
+    "FOOTER": {
+        "COPYRIGHT": "© 2025 Henrry Gutierrez - My Portfolio"
     }
 }
